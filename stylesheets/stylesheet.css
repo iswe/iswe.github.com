@@ -57,7 +57,17 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
-
+#canvas{
+  position: absolute;
+  z-index: 0;
+}
+#warp {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(33, 33, 33, 0.8);
+  z-index: 1;
+}
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
   font-weight: 700;
@@ -284,15 +294,6 @@ Full-Width Styles
   border-bottom-right-radius: 2px;
 }
 
-#header_wrap {
-  background: #212121;
-  background: -moz-linear-gradient(top, #373737, #212121);
-  background: -webkit-linear-gradient(top, #373737, #212121);
-  background: -ms-linear-gradient(top, #373737, #212121);
-  background: -o-linear-gradient(top, #373737, #212121);
-  background: linear-gradient(top, #373737, #212121);
-}
-
 #header_wrap .inner {
   padding: 50px 10px 30px 10px;
 }
@@ -360,10 +361,6 @@ Full-Width Styles
 
 #main_content {
   padding-top: 40px;
-}
-
-#footer_wrap {
-  background: #212121;
 }
 
 
