@@ -62,7 +62,7 @@ body {
   z-index: 0;
   opacity: 0.8;
 }
-#warp {
+#wrap {
   position: absolute;
   width: 100%;
   z-index: 1;
