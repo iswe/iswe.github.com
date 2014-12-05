@@ -1,26 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8" />
-<title>目录</title>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<meta content="telephone=no" name="format-detection" />
-<meta content="false" id="twcClient" name="twcClient" />
+<meta charset="utf-8">
+<title>iswe.github.io 目录</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="false" id="twcClient" name="twcClient">
 <style>
-    body{font-family:arial,"FangSong";}
-    a{color:#f60;}
-    a:visited{color:#f60;}
+	h1{font:bold 32px 'trebuchet MS', 'lucida sans';text-align:center;}
+	h3{text-align: center;font-weight: normal;}
+    ol.rectangle-list{
+        counter-reset: li; /* 创建一个计数器 */
+        list-style: none; /* 清除列表默认的编码*/
+        *list-style: decimal; /* 让IE6/7具有默认的编码 */
+        font: 32px 'trebuchet MS', 'lucida sans';
+        padding: 0;
+        margin: 0 100px 50px;
+        text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	}
+
+	ol.rectangle-list ol{
+		margin: 0 0 0 2em; /* 给二级列表增加一定的左边距*/
+	}
+	.rectangle-list a {
+		position: relative;
+		display: block;
+		padding: 0.4em 0.4em 0.4em 0.8em;
+		*padding: 0.4em;
+		margin: 0.5em 0 0.5em 2em;
+		background: #ddd;
+		color: #444;
+		text-decoration: none;
+		-webkit-transition: all 0.3s ease-out;
+		-moz-transition: all 0.3s ease-out;
+		-ms-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+	}
+	.rectangle-list li:nth-child(1) a,.rectangle-list li:nth-child(2) a,.rectangle-list li:nth-child(3) a {
+		background: #00CAFF;
+	}
+	.rectangle-list li:nth-child(1) a:hover,.rectangle-list li:nth-child(2) a:hover,.rectangle-list li:nth-child(3) a:hover {
+		background: #60DEFF;
+	}
+	.rectangle-list li:nth-child(1) a::before,.rectangle-list li:nth-child(2) a::before,.rectangle-list li:nth-child(3) a::before {
+		background: #00CAFF;
+	}
+	.rectangle-list li:nth-child(1) a:hover::after,.rectangle-list li:nth-child(2) a:hover::after,.rectangle-list li:nth-child(3) a:hover::after {
+		border-left-color: #00CAFF;
+	}
+	.rectangle-list a:hover {
+		background: #eee;
+	}
+	.rectangle-list a::before {
+		content: counter(li);
+		counter-increment: li;
+		position: absolute;
+		left: -2.5em;
+		top: 50%;
+		margin-top: -1em;
+		background: #fa8072;
+		width: 2em;
+		height: 2em;
+		line-height: 2em;
+		text-align: center;
+		-webkit-transition: all 0.3s ease-out;
+		-moz-transition: all 0.3s ease-out;
+		-ms-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+	}
+	.rectangle-list a::after {
+		position: absolute;
+		content:"";
+		border: 0.5em solid transparent;
+		left: -1em;
+		top: 50%;
+		margin-top: -0.5em;
+		-webkit-transition: all 0.3s ease-out;
+		-moz-transition: all 0.3s ease-out;
+		-ms-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+	}
+	.rectangle-list a:hover::after {
+		left: -0.5em;
+		border-left-color: #fa8072;
+	}
 </style>
-<head>
+</head>
 <body>
-    <p><a href="http://iswe.github.io/demo/baseCSS.css">base css</a></p>
-    <p><a href="http://iswe.github.io/demo/CSS:DIV保持在页面底部.html">CSS:DIV保持在页面底部</a></p>
-    <p><a href="http://iswe.github.io/demo/DIV曲线.html">CSS3:DIV曲线</a></p>
-    <p><a href="http://iswe.github.io/demo/clip裁剪.html">clip裁剪</a></p>
-    <p><a href="http://iswe.github.io/demo/中文字体的英文名.html">中文字体的英文名</a></p>
-    <p><a href="http://iswe.github.io/demo/阅读并同意服务协议.html">阅读并同意《服务协议》</a></p>
-    <p><a href="http://iswe.github.io/demo/头尾固定中间滚动.html">头尾固定中间滚动</a></p>
+	<h1>iswe.github.io 目录</h1>
+	<h3>请使用 "Ctrl+f" 关键字搜索</h3>
+    <ol class="rectangle-list">
+    	<li><a href="http://iswe.github.io/demo/baseCSS.css">base css</a></li>
+	    <li><a href="http://iswe.github.io/demo/CSS:DIV保持在页面底部.html">CSS:DIV保持在页面底部</a></li>
+	    <li><a href="http://iswe.github.io/demo/DIV曲线.html">CSS3:DIV曲线</a></li>
+	    <li><a href="http://iswe.github.io/demo/clip裁剪.html">clip裁剪</a></li>
+	    <li><a href="http://iswe.github.io/demo/中文字体的英文名.html">中文字体的英文名</a></li>
+	    <li><a href="http://iswe.github.io/demo/阅读并同意服务协议.html">阅读并同意《服务协议》</a></li>
+	    <li><a href="http://iswe.github.io/demo/头尾固定中间滚动.html">头尾固定中间滚动</a></li>
+	</ol>
+	<h3>iswe.github.io</h3>
 </body>
 </html>
