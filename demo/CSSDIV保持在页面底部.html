@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+	<title>CSS:DIV保持在页面底部</title>
+	<style type="text/css">
+		/* 主要部分 */
+		html, body, #container { height: 100%; margin: 0; padding: 0; }
+		body > #container { height: auto; min-height: 100%; }
+		#content { padding-bottom: 60px; }
+		#footer { clear: both; position: relative; z-index: 10; height: 60px; line-height: 60px; margin-top: -60px; }
+		/* 样式部分 */
+		#about { padding: 50px;outline:none;}
+		#footer { background: black; color: white;text-align: center;}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="content">
+			<div id="about">
+				
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		固定不变的底部
+	</div>
+</body>
+</html>
