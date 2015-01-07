@@ -9,14 +9,18 @@
 <meta content="telephone=no" name="format-detection">
 <meta content="false" id="twcClient" name="twcClient">
 <style type="text/css">
-	
-	#input1{ime-mode: disabled;}
+	input[type="text"],input[type="password"],input[type="number"],select,textarea{-webkit-user-select: text;}
+	#input1{-webkit-user-select: none;-webkit-appearance: button}
 </style>
 </head>
 
 <body>
 <input type="text" />
-<input type="text" id="input1" />
-<input style="ime-mode: disabled">
+<input type="text" id="input1" value="q" />
+<select>
+	<option>1</option>
+	<option>1</option>
+	<option>1</option>
+</select>
 </body>
 </html>
