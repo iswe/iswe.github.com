@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+<title></title>
+<style>
+.walk {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-name: walk;
+          animation-name: walk;
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+}
+.runner {
+  -webkit-animation-timing-function: steps(9,start);
+          animation-timing-function: steps(9,start);
+  -webkit-animation-duration: .6s;
+          animation-duration: .6s;
+  -webkit-animation-name: runner;
+          animation-name: runner;
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+.runner {
+  position: fixed;
+  background-image: url(mrunner.32.png);
+  width: 60px;
+  height: 67px;
+  top: 0;
+  left: 0;
+}
+@-webkit-keyframes walk{
+  0%{
+    -webkit-transform:translate3d(0,0,0);
+            transform:translate3d(0,0,0)
+  }
+  100%{
+    -webkit-transform:translate3d(200px,0,0);
+            transform:translate3d(200px,0,0)
+  }
+}
+@keyframes walk{
+  0%{transform:translate3d(0,0,0)}
+  100%{transform:translate3d(200px,0,0)}
+}
+@-webkit-keyframes runner{
+  0%{background-position:0 0}
+  100%{background-position:540px 0}
+}
+@keyframes runner{
+  0%{background-position:0 0}
+  100%{background-position:540px 0}
+}
+</style>
+</head>
+<body>
+<div class="walk">
+    <div class="runner"></div>
+</div>
+</body>
+</html>
