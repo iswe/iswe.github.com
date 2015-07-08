@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3水平、垂直弹性布局</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+<title></title>
+<style>
+html,body{height:100%;padding:0;margin:0;}
+.box {
+display: -moz-box; 
+display: -webkit-box; 
+display: box; 
+-webkit-box-orient: vertical;
+-moz-box-orient: vertical;
+height: 100%;
+}
+.list {
+font-size: 8em;
+display: -webkit-box;
+display: -moz-box;
+display: box;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+-webkit-box-align: center;
+-moz-box-align: center;
+box-align: center;
+-webkit-box-flex: 1;
+-moz-box-flex: 1;
+}
+.list1 {background:#FFE79F;margin-top:30px;}
+.list2 {background:#F0D7FE;}
+.list3 {background:#C8EDFF;}
+.list1 div{-webkit-box-flex: 1;-moz-box-flex: 1;}
+.list4 {background:#C8EDFF;}
+.list5 {background:#F0D7FE;}
+.list6 {background:#C8EDFF;}
+.title {height:30px;line-height:30px;margin-bottom:-30px;font-size:1em;text-align:center;}
+</style>
+</head>
+<body>
+  <div class="title">标题</div>
+  <div class="box">
+    <div class="list list1">
+      <div class="list4">1</div>
+      <div class="list5">2</div>
+      <div class="list6">3</div>
+    </div>
+    <div class="list list2">2</div>
+    <div class="list list3">3</div>
+  </div>
+</body>
+</html>
