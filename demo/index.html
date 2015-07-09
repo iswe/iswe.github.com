@@ -45,6 +45,8 @@
   /*}*/
   body{
     font-family: "CODELight",Verdana,\5B8B\4F53;
+    margin:0;
+    padding:0;
   }
   body:before,body:after{
     position:fixed;
@@ -189,7 +191,22 @@
   .rectangle-list a:hover::after {
     left: -0.5em;
     border-left-color: #fa8072;
-  }
+  }@media screen and (max-width: 319px) {
+  ol.rectangle-list {font-size: 14px;}
+  h1{font-size: 18px;}
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  ol.rectangle-list {font-size: 18px;}
+  h1{font-size: 24px;}
+}
+@media screen and (min-width: 480px) and (max-width: 719px) {
+  ol.rectangle-list {font-size: 24px;}
+  h1{font-size: 32px;}
+}
+@media screen and (min-width: 720px) {
+  ol.rectangle-list {font-size: 24px;}
+  h1{font-size: 32px;}
+}
 </style>
 </head>
 <body>
