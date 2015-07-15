@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes"/>
+<script>
+  var setFontSize = function(){  
+    var width = document.documentElement.clientWidth;  
+    width = width > 640 ? 640: width;  
+    var fontSize = width/640 * 100;  
+    document.getElementsByTagName("html")[0].style.fontSize = fontSize + "px";
+  }  
+  setFontSize();
+  window.onresize = setFontSize;
+</script>
+<style type="text/css">
+  html,body{height:100%;font-size:12px;}
+  html,body,p,input,ul,li{margin:0;padding:0;}
+  ul,li{list-style:none;}
+  body{background:#f5f5f5;font:0.2rem/1.5 "microsoft yahei",arial;color:#fff;}
+  .viewport{width:6.1rem;margin:0 auto;padding:0.3rem 0 0.3rem 0.3rem;}
+  .list{overflow:hidden;}
+  .list li{float:left;width:2.8rem;height:1.6rem;margin:0 0.2rem 0.2rem 0;}
+  .list li.big{width:5.8rem;}
+  .list:last-of-type{margin-bottom:0.3rem;}
+  .div2{height:.6rem;line-height:.6rem;font-size:.3rem;color:#666;border:1px solid #999;margin-bottom:0.3rem;}
+  .div3{height:32px;line-height:32px;font-size:18px;color:#666;border:1px solid #999;margin-bottom:0.3rem;}
+</style>
+</head>
+<body>
+  <div class="viewport">
+    <ul class="list">
+      <li style="background:#018AFC"></li>
+      <li style="background:#FF3E3E"></li>
+      <li class="big" style="background:#9600FF"></li>
+    </ul>
+    <div class="div2">博客园首页联系订阅管理</div>
+    <div class="div3">博客园首页联系订阅管理</div>
+  </div>
+</body>
+</html>
