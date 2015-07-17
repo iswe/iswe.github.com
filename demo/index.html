@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -87,8 +88,7 @@
     bottom: 0px;
   }
   .wraper{
-    width: 70%;
-    margin-left: 15%;
+    width: 100%;
     position:absolute;
     top: 0;
     -webkit-animation:in 1s ;
@@ -114,7 +114,7 @@
     text-align: center;
     font-weight: normal;
   }
-  ol.rectangle-list{
+  .rectangle-list{
     counter-reset: li; /* 创建一个计数器 */
     list-style: none; /* 清除列表默认的编码*/
     *list-style: decimal; /* 让IE6/7具有默认的编码 */
@@ -122,7 +122,7 @@
     padding: 0;
     text-shadow: 0 1px 0 rgba(255,255,255,.5);
   }
-  ol.rectangle-list ol{
+  .rectangle-list ol{
     margin: 0 0 0 2em; /* 给二级列表增加一定的左边距*/
   }
   .rectangle-list a {
@@ -130,7 +130,7 @@
     display: block;
     padding: 0.4em 0.4em 0.4em 0.8em;
     *padding: 0.4em;
-    margin: 0.5em 0 0.5em 2em;
+    margin: 0.5em 0.5em 0.5em 3em;
     background: #ddd;
     color: #444;
     text-decoration: none;
@@ -191,21 +191,26 @@
   .rectangle-list a:hover::after {
     left: -0.5em;
     border-left-color: #fa8072;
-  }@media screen and (max-width: 319px) {
-  ol.rectangle-list {font-size: 14px;}
+  }
+@media screen and (max-width: 319px) {
   h1{font-size: 18px;}
+  .rectangle-list {font-size: 14px;}
+  .rectangle-list li:nth-child(4n+3) {margin-bottom: 15px;}
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
-  ol.rectangle-list {font-size: 18px;}
   h1{font-size: 24px;}
+  .rectangle-list {font-size: 18px;}
+  .rectangle-list li:nth-child(4n+3) {margin-bottom: 15px;}
 }
 @media screen and (min-width: 480px) and (max-width: 719px) {
-  ol.rectangle-list {font-size: 24px;}
   h1{font-size: 32px;}
+  .rectangle-list {font-size: 24px;}
+  .rectangle-list li:nth-child(4n+3) {margin-bottom: 40px;}
 }
 @media screen and (min-width: 720px) {
-  ol.rectangle-list {font-size: 24px;}
   h1{font-size: 32px;}
+  .rectangle-list {font-size: 24px;}
+  .rectangle-list a {margin: 0.5em 3.5em 0.5em 6em;}
 }
 </style>
 </head>
