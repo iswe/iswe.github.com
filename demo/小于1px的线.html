@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes"/>
+<style type="text/css">
+	.div1{
+		width:100%;
+		height:30px;
+		border-bottom: 1px solid #f60;
+		background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='0.5'><rect fill='#f60' x='0' y='0' width='100%' height='0.5'/></svg>");
+	    background-repeat: no-repeat;
+	    background-position: 0px 22px;
+	}
+	.div2{
+		margin-top: 10px;
+		width:30px;
+		height:30px;
+		background-color:rgba(255, 102, 0, 0.2);
+		background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><circle xmlns='http://www.w3.org/2000/svg' cx='5' cy='5' r='5' fill='#f90'/></svg>");
+	    background-repeat: no-repeat;
+	    background-position: center;
+	}
+</style>
+</head>
+<body>
+  <div class="div1"></div>
+  <div class="div2"></div>
+
+<style>
+#textarea{
+width:100%;
+font:12px/24px "microsoft yahei";
+color:#666;
+margin-top: 20px;
+border:none;
+background-color:#fff;
+background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='24'><rect fill='#f60' x='0' y='0' width='100%' height='0.5' opacity='0.5'/></svg>");
+background-repeat:repeat-y;
+background-position:0px 26px;}
+</style>
+<textarea id="textarea" disabled="disabled">
+HTML//
+	<div class="div1"></div>
+	<div class="div2"></div>
+CSS//
+	.div1{
+	width:100%;
+	height:30px;
+	border-bottom: 1px solid #f60;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='0.5'><rect fill='#f60' x='0' y='0' width='100%' height='0.5'/></svg>");
+	background-repeat: no-repeat;
+	background-position: 0px 22px;
+	}
+	.div2{
+	margin-top: 10px;
+	width:30px;
+	height:30px;
+	background-color:rgba(255, 102, 0, 0.2);
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><circle xmlns='http://www.w3.org/2000/svg' cx='5' cy='5' r='5' fill='#f90'/></svg>");
+	background-repeat: no-repeat;
+	background-position: center;
+	}
+</textarea>
+<script>document.getElementById("textarea").style.height=document.getElementById("textarea").scrollHeight+"px";</script>
+</body>
+</html>
