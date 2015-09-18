@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>CSS3特效</title>
+<title>CSS3动画小集</title>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 <meta content="yes" name="apple-mobile-web-app-capable" />
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
@@ -23,7 +23,16 @@
   50% {box-shadow: 0 0 10px rgba(0,100,100, .3);}
   100% {box-shadow: 0 0 10px rgba(0,100,100, 1);}
 }
-.ball{width:10px;height:10px;border-radius: 50%;display:inline-block;background:-webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#2c91d2)); position: absolute;left: 85px;top: 90px;  -webkit-animation: ball1 1.0s 2s ease; }
+.ball{
+  width:10px;
+  height:10px;
+  border-radius: 50%;
+  display:inline-block;
+  background:-webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#2c91d2)); position: absolute;
+  top:-10px;
+  left:-10px;  
+  -webkit-animation: ball1 1.0s 2s ease forwards; 
+}
 @-webkit-keyframes ball1{
   0%{top:-10px;left:-10px;}
   20%{top:90px;left:30px;}
@@ -340,5 +349,65 @@
   </div>
 
 
+<style>
+#textarea{
+  width:100%;
+  font:12px/24px "microsoft yahei";
+  color:#666;
+  margin-top: 20px;
+  border:none;
+  background-color:#fff;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='24'><rect fill='#f60' x='0' y='0' width='100%' height='0.2'/></svg>");
+  background-repeat:repeat-y;
+  background-position:0px 22px;
+}
+</style>
+<textarea id="textarea" disabled="disabled">
+-webkit-animation-name : myfirst;   动画的名称。
+
+-webkit-animation-duration : 1s;  规定完成动画所花费的时间。默认值是 0，意味着没有动画效果。
+
+-webkit-animation-timing-function : linear;   规定动画的速度曲线。默认是 "ease"。取值：linear、ease、ease-in、ease-out、ease-in-out
+
+-webkit-animation-delay : 1s;  规定动画何时开始。默认是 0。取值：time
+
+-webkit-animation-iteration-count : 1;   规定动画被播放的次数。默认是 1。取值：infinite、time
+
+-webkit-animation-direction : normal;   规定动画是否轮流反向播放。默认是 "normal"。取值：normal、alternate
+
+-webkit-animation-play-state : running;   规定动画是否正在运行或暂停。默认是 "running"。取值：paused、running
+
+-animation-fill-mode : forwards //设置对象状态为动画结束时的状态 
+-animation-fill-mode 
+语法：
+animation-fill-mode：none | forwards | backwards | both [ , 
+none | forwards | backwards | both ]*
+默认值：none
+
+适用于：所有元素，包含伪对象:after和:before
+
+继承性：无
+取值：
+
+none：
+默认值。不设置对象动画之外的状态
+
+forwards：
+设置对象状态为动画结束时的状态
+
+backwards：
+设置对象状态为动画开始时的状态
+
+both：
+设置对象状态为动画结束或开始的状态
+
+说明：
+
+检索或设置对象动画时间之外的状态
+
+如果提供多个属性值，以逗号进行分隔。
+对应的脚本特性为animationFillMode。
+</textarea>
+<script>document.getElementById("textarea").style.height=document.getElementById("textarea").scrollHeight+"px";</script>
 </body>
 </html>
