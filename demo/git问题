@@ -1,0 +1,19 @@
+问题1
+"![rejected] master -> master (fetch first)"
+$ git fetch
+
+问题2
+"![rejected] master -> master (non-fast-forward)"
+$ git pull origin master
+
+问题3
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/xxx.git/'
+$ git config --global credential.helper store
+
+问题4
+fatal: Unable to create 'D:/xxx.github.com/.git/index.lock': File exists.
+If no other git process is currently running, this probably means a
+git process crashed in this repository earlier. Make sure no other git
+process is running and remove the file manually to continue.
+$ rm -f ./.git/index.lock
