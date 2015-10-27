@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>    </title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"name="viewport"/>
+    <meta content="yes"name="apple-mobile-web-app-capable"/>
+    <meta content="black"name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no"name="format-detection"/>
+    <meta content="false"id="twcClient"name="twcClient"/>
+    <style type="text/css">
+    a, button, div, fieldset, footer, form, h1, h2, h3, h4, header, input, label, li, main, ol, p, select, textarea, ul {
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        font-family:"microsoft yahei";
+        line-height: 1.6;
+    }
+    .d-container {
+        background: #f7f7f7;
+        border-bottom: 1px solid #eee;
+        margin: 2em auto;
+        padding: 2em 0;
+        width: 100%;
+    }
+    .d-flex-stretch {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 960px;
+        margin: 0 auto;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: stretch;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+    }
+    .d-flex-stretch>div {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 0 30%;
+        -ms-flex: 1 0 30%;
+        flex: 1 0 30%;
+        border: 1px solid #ddd;
+        border-left: none;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 2em;
+        background: #fff;
+    }
+    .d-flex-stretch>div:first-child {
+        border-left: 1px solid #ddd;
+    }
+    .d-flex-stretch h2 {
+        margin: 0 0 1em;
+    }
+
+    .flex-container {
+        display: flex;
+        width: 480px;
+        margin: 20px auto 0;
+        color: #fff;
+        text-align: center;
+        justify-content: space-between;
+    }
+    .flex-container div {
+        height: 40px;
+        line-height: 40px;
+    }
+    .flex-container .item1 {
+        background: #484281;
+        flex: 3 0 100px;
+    }
+    .flex-container .item2 {
+        background: #5248af;
+        flex: 2 0 100px;
+    }
+    .flex-container .item3 {
+        background: #786bfa;
+        flex: 1 0 100px;
+    }
+    .flex-container2 {
+        display: flex;
+        width: 480px;
+        margin: 20px auto 0;
+        color: #fff;
+        text-align: center;
+        justify-content: space-between;
+    }
+    .flex-container2 div {
+        height: 40px;
+        line-height: 40px;
+    }
+    .flex-container2 .item1 {
+        background: #484281;
+        flex: 3 3 200px;
+    }
+    .flex-container2 .item2 {
+        background: #5248af;
+        flex: 2 2 200px;
+    }
+    .flex-container2 .item3 {
+        background: #786bfa;
+        flex: 1 1 200px;
+    }
+    .flex-container3 {
+        display: flex;
+        width: 480px;
+        margin: 20px auto 0;
+        color: #fff;
+        text-align: center;
+        justify-content: space-between;
+    }
+    .flex-container3 div {
+        height: 40px;
+        line-height: 40px;
+    }
+    .flex-container3 .item1 {
+        background: #484281;
+        flex: 1 0 25%;
+    }
+    .flex-container3 .item2 {
+        background: #5248af;
+        flex: 1 0 25%;
+    }
+    .flex-container3 .item3 {
+        background: #786bfa;
+        flex: 1 0 25%;
+    }
+    </style>
+</head>
+<body>
+    <div class="wp">
+        <figure class="d-container">
+            <div class="d-flex-stretch">
+                <div>
+                    <h2>Column one</h2>
+                    <p>
+                        You'll notice that even though this column has far more content in it, instead of the other columns ending early, they size themselves to meet the end of this column vertically.
+                    </p>
+                </div>
+                <div>
+                    <h2>Column two</h2>
+                    <p>This is a column with not much content.</p>
+                </div>
+                <div>
+                    <h2>Column Three</h2>
+                    <p>Normally, the only way to achieve this would be either a hack, or to set all boxes to min-height.</p>
+                </div>
+                <div>
+                    <h2>Column Three</h2>
+                    <p>Normally, the only way to achieve this would be either a hack, or to set all boxes to min-height.</p>
+                </div>
+            </div>
+        </figure>
+
+
+        <style>
+        textarea {
+            width: 100%;
+            font: 12px/24px "microsoft yahei";
+            color: #666;
+            margin-top: 20px;
+            border: none;
+            background-color: #fff;
+            background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='24'><rect fill='#f60' x='0' y='0' width='100%' height='0.2'/></svg>");
+            background-repeat: repeat-y;
+            background-position: 0px 22px;
+        }
+        </style>
+        <textarea id='textarea' disabled='disabled'>
+            flex: 1 1 200px;
+            flex是flex-grow,flex-shrink,flex-basis的缩写形式;
+            默认值是flex:0 1 auto;
+        </textarea>
+        <script>document.getElementById("textarea").style.height=document.getElementById("textarea").scrollHeight+"px";
+        </script>
+        <div class="flex-container">
+            <div class="item1">3 0 100px</div>
+            <div class="item2">2 0 100px</div>
+            <div class="item3">1 0 100px</div>
+        </div>
+        <textarea id='textarea2' disabled='disabled'>
+            容器总宽度=480px;  
+            flex-item-total=100*3=300px;
+            可用多余空间=480-300=180px; 
+            flex-grow=3+2+1=6; 
+            每单位多余空间=180/6=30px;  
+            所以：
+            item1=100-(30*3)=190px;
+            item2=100-(30*2)=160px; 
+            item3=100-(30*1)=130px; 
+        </textarea>
+        <script>document.getElementById("textarea2").style.height=document.getElementById("textarea2").scrollHeight+"px";
+        </script>
+
+        <div class="flex-container2">
+            <div class="item1">3 3 200px</div>
+            <div class="item2">2 2 200px</div>
+            <div class="item3">1 1 200px</div>
+        </div>
+        <textarea id='textarea3' disabled='disabled'>
+            容器总宽度=480px; 
+            flex-item-total=200*3=600px; 
+            超出宽度=600-480=120px;  
+            item-shrink=3+2+1=6; 
+            所以：
+            item1=200-(120*(3/6))=140px;
+            item2=200-(120*(2/6))=160px; 
+            item3=200-(120*(1/6))=180px; 
+        </textarea>
+        <script>document.getElementById("textarea3").style.height=document.getElementById("textarea3").scrollHeight+"px";
+        </script>
+
+
+        <div class="flex-container3">
+            <div class="item1">1 0 25%</div>
+            <div class="item2">1 0 25%</div>
+            <div class="item3">1 0 25%</div>
+        </div>
+    </div>
+</body>
+</html>
