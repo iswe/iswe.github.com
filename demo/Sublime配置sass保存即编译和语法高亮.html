@@ -25,8 +25,16 @@
         }
         </style>
         <textarea id="textarea" disabled="disabled">
-            Sublime配置sass保存即编译和语法高亮
+            一、先安装Ruby
+            1.安装过程中确保勾选“Add Ruby executables to your PATH”
+            2.开始菜单启动Ruby"Start Command Prompt with Ruby"
+            3.安装SASS
+            $set http_proxy=10.17.171.11:8080(有外网权限跳过这一命令)
+            $gem sources --remove https://rubygems.org/
+            $gem sources -a https://ruby.taobao.org/
+            $gem install sass
 
+            二、Sublime配置sass保存即编译和语法高亮
             安装插件
             SASS-Build (https://github.com/jaumefontal/SASS-Build-SublimeText2)
             SublimeOnSaveBuild (https://github.com/alexnj/SublimeOnSaveBuild)
