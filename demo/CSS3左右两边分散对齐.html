@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>CSS3左右两边分散对齐</title>
+<style>
+    *{padding:0;margin:0;}
+    .flex-container {
+        display: -webkit-flex;
+        justify-content: space-between;
+    }
+
+    .flex-item {
+        width:24%;
+        height:200px;
+        display:-webkit-box;
+        -webkit-box-pack:center;
+        -webkit-box-align:center;
+        color:white;
+        background-color:orange;
+    }
+</style>
+</head> 
+<body>
+    <ul class="flex-container">
+        <li class="flex-item"><p>-webkit-box-<br>pack:center;</p></li>
+        <li class="flex-item">webkit-box-</li>
+        <li class="flex-item"><p>background-color:<br>$orange;</p></li>
+        <li class="flex-item">width<br>height</li>
+    </ul>
+</body>
+</html>
