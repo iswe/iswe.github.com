@@ -25,11 +25,26 @@
 		background-repeat: no-repeat;
 		background-position: center;
 	}
+	.p1{
+        border-top: 1px solid #ddd;
+        position: relative;
+      }
+      .p1:after{
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 1px;
+        background-color: #ddd;
+        -webkit-transform: scaleY(0.5);
+      }
 </style>
 </head>
 <body>
   <div class="div1"></div>
   <div class="div2"></div>
+  <p>仅供参考，持续更新</p>
 
 <style>
 #textarea{
@@ -48,6 +63,7 @@
 HTML//
 	<div class="div1"></div>
 	<div class="div2"></div>
+	<p>仅供参考，持续更新</p>
 CSS//
 	.div1{
 	width:100%;
@@ -68,6 +84,20 @@ CSS//
 	background-repeat: no-repeat;
 	background-position: center;
 	}
+	.p1{
+        border-top: 1px solid #ddd;
+        position: relative;
+      }
+      .p1:after{
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 1px;
+        background-color: #ddd;
+        -webkit-transform: scaleY(0.5);
+      }
 </textarea>
 <script>document.getElementById("textarea").style.height=document.getElementById("textarea").scrollHeight+"px";</script>
 </body>
