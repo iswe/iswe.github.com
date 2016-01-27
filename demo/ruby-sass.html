@@ -1,20 +1,29 @@
-http://rubyinstaller.org/downloads/
-//下载安装ruby，过程中勾选“添加到环境变量”
+<html>
+  <head>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+  </head>
+  <body>
+    <p>http://rubyinstaller.org/downloads/</p>
+    <p>//下载安装ruby，过程中勾选“添加到环境变量”</p>
+    <br>
+    <p>ruby -v</p>
+    <p>//显示ruby版本</p>
+    <br>
+    <p>gem sources --remove https://rubygems.org/</p>
+    <p>//删除原gem源</p>
+    <br>
+    <p>set http_proxy=http://proxy.mysite.com:8080</p>
+    <p>//如果没有代理不需要这一步骤</p>
+    <br>
+    <p>gem sources -a https://ruby.taobao.org/</p>
+    <p>//添加淘宝源</p>
+    <br>
+    <p>gem sources -l</p>
+    <p>//显示源</p>
+    <br>
+    <p>gem list</p>
+    <p>//显示已安装的包</p>
+    <br>
+  </body>
+</html>
 
-ruby -v
-//显示ruby版本
-
-gem sources --remove https://rubygems.org/
-//删除原gem源
-
-set http_proxy=http://proxy.mysite.com:8080
-//如果没有代理不需要这一步骤
-
-gem sources -a https://ruby.taobao.org/
-//添加淘宝源
-
-gem sources -l
-//显示源
-
-gem list
-//显示已安装的包
