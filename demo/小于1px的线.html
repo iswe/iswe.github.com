@@ -1,96 +1,38 @@
-<!DOCTYPE html>
 <html>
-<head>
-<title></title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta name="format-detection" content="telephone=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-touch-fullscreen" content="yes"/>
-<style type="text/css">
-	.div1{
-		width:100%;
-		height:30px;
-		border-bottom: 1px solid #f60;
-		background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='0.5'><rect fill='#f60' x='0' y='0' width='100%' height='0.5'/></svg>");
-		background-repeat: no-repeat;
-		background-position: 0px 22px;
-	}
-	.div2{
-		margin-top: 10px;
-		width:30px;
-		height:30px;
-		background-color:rgba(255, 102, 0, 0.2);
-		background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><circle xmlns='http://www.w3.org/2000/svg' cx='5' cy='5' r='5' fill='#f90'/></svg>");
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-	.p1{
-        border-top: 1px solid #f60;
-        position: relative;
-      }
-      .p1:after{
-        position: absolute;
-        content: "";
-        left: 0;
-        bottom: -2px;
-        width: 100%;
-        height: 1px;
-        background-color: #f60;
-        -webkit-transform: scaleY(0.2);
-        -webkit-transform-origin: 0 0;
-      }
-</style>
-</head>
-<body>
-  <div class="div1"></div>
-  <div class="div2"></div>
-  <p class="p1">仅供参考，持续更新</p>
 
-<style>
-#textarea{
-	width:100%;
-	font:12px/24px "microsoft yahei";
-	color:#666;
-	margin-top: 20px;
-	border:none;
-	background-color:#fff;
-	background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='24'><rect fill='#f60' x='0' y='0' width='100%' height='0.2'/></svg>");
-	background-repeat:repeat-y;
-	background-position:0px 22px;
-}
-</style>
-<textarea id="textarea" disabled="disabled">
-HTML//
-	<div class="div1"></div>
-	<div class="div2"></div>
-	<p class="p1">仅供参考，持续更新</p>
-CSS//
-	.div1{
-	width:100%;
-	height:30px;
-	border-bottom: 1px solid #f60;
-	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='0.5'><rect fill='#f60' x='0' y='0' width='100%' height='0.5'/></svg>");
-	background-repeat: no-repeat;
-	background-position: 0px 22px;
-	/*background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><line x1='0' y1='100%' x2='100%' y2='100%' style='stroke:#f60;stroke-width:0.5'/></svg>");
-	background-repeat: no-repeat;*/
-	}
-	.div2{
-	margin-top: 10px;
-	width:30px;
-	height:30px;
-	background-color:rgba(255, 102, 0, 0.2);
-	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><circle xmlns='http://www.w3.org/2000/svg' cx='5' cy='5' r='5' fill='#f90'/></svg>");
-	background-repeat: no-repeat;
-	background-position: center;
-	}
-	//css3缩放
-	.p1{
+<head>
+    <title>小于1px的线</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <style type="text/css">
+    .div1 {
+        width: 100%;
+        height: 30px;
+        border-bottom: 1px solid #f60;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='0.5'><rect fill='#f60' x='0' y='0' width='100%' height='0.5'/></svg>");
+        background-repeat: no-repeat;
+        background-position: 0px 22px;
+    }
+    
+    .div2 {
+        margin-top: 10px;
+        width: 30px;
+        height: 30px;
+        background-color: rgba(255, 102, 0, 0.2);
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><circle xmlns='http://www.w3.org/2000/svg' cx='5' cy='5' r='5' fill='#f90'/></svg>");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .p1 {
         border-top: 1px solid #f60;
         position: relative;
-      }
-      .p1:after{
+    }
+    
+    .p1:after {
         position: absolute;
         content: "";
         left: 0;
@@ -100,8 +42,41 @@ CSS//
         background-color: #f60;
         -webkit-transform: scaleY(0.2);
         -webkit-transform-origin: 0 0;
-      }
-</textarea>
-<script>document.getElementById("textarea").style.height=document.getElementById("textarea").scrollHeight+"px";</script>
+    }
+    
+    .mydiv {
+        width: 300px;
+        height: 200px;
+        position: relative;
+    }
+    
+    .mydiv:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        content: "";
+        width: 600px;
+        height: 400px;
+        background-color: #FFF5F5;
+        border: 1px solid #f60;
+        border-radius: 5px;
+        -webkit-transform: scale(0.5, 0.5);
+        -webkit-transform-origin: 0 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="div1">SVG</div>
+    <div class="div2">SVG</div>
+    <p class="p1">SVG</p>
+    <div class="mydiv">
+        <p>CSS3</p>
+        <p>-webkit-transform: scale(0.5,0.5);//缩放</p>
+        <p>-webkit-transform-origin: 0 0;//基点</p>
+    </div>
 </body>
+
 </html>
