@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS3开门效果</title>
+    <meta charset="utf-8">
+    <style>
+    .div1 {
+        position: relative;
+        height: 150px;
+        width: 150px;
+        margin: 50px;
+        background-color: #ddd;
+        -webkit-perspective: 150;
+    }
+    
+    .div2 {
+        width: 150px;
+        height: 150px;
+        line-height: 150px;
+        text-align: center;
+        position: absolute;
+        background-color: yellow;
+        -webkit-transform: rotateY(0deg);
+        -webkit-transform-origin: 0 0;
+        -webkit-transition: transform 1s;
+        /*执行动画的属性和所动画所需要的时间*/
+    }
+    
+    .div2:hover {
+        -webkit-transform: rotateY(45deg);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <div class="div2">:hover</div>
+    </div>
+</body>
+
+</html>
