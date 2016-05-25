@@ -1,144 +1,253 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>iswe.github.io</title>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-<!-- 删除苹果默认的工具栏和菜单栏 -->
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<!-- 设置苹果工具栏颜色 -->
-<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-<!-- 忽略页面中的数字识别为电话，忽略email识别 -->
-<meta name="format-detection" content="telphone=no, email=no" />
-<!-- 启用360浏览器的极速模式(webkit) -->
-<meta name="renderer" content="webkit">
-<!-- 避免IE使用兼容模式 -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
-<meta name="HandheldFriendly" content="true">
-<!-- 微软的老式浏览器 -->
-<meta name="MobileOptimized" content="320">
-<!-- uc强制竖屏 -->
-<meta name="screen-orientation" content="portrait">
-<!-- QQ强制竖屏 -->
-<meta name="x5-orientation" content="portrait">
-<!-- UC强制全屏 -->
-<meta name="full-screen" content="yes">
-<!-- QQ强制全屏 -->
-<meta name="x5-fullscreen" content="true">
-<!-- UC应用模式 -->
-<meta name="browsermode" content="application">
-<!-- QQ应用模式 -->
-<meta name="x5-page-mode" content="app">
-<!-- windows phone 点击无高光 -->
-<meta name="msapplication-tap-highlight" content="no">
-<style>
-  html,body{height:100%;}
-  @font-face { font-family: "CODELight"; src: url("CODELight.otf");}
-  /*@font-face { */
-  /*  font-family: "Yueheiteixi"; */
-  /*  src: url("Yueheiteixi.otf"); */
-  /*}*/
-  body{font-family:"CODELight",Verdana,\5B8B\4F53;margin:0;padding:0;}
-  body:before,body:after{position:fixed;z-index:1;content:"";width:100%;height:1px;top:0px;
-    background-image:-webkit-linear-gradient(
-      to left, 
-      rgba(255,0,0,0) 0%, 
-      rgba(255,0,0,0.8) 7%, 
-      rgba(255,0,0,1) 11%, 
-      rgba(255,0,0,1) 12%, 
-      rgba(255,252,0,1) 28%, 
-      rgba(1,180,7,1) 45%, 
-      rgba(0,234,255,1) 60%, 
-      rgba(0,3,144,1) 75%, 
-      rgba(255,0,198,1) 88%, 
-      rgba(255,0,198,0.8) 93%, 
-      rgba(255,0,198,0) 100%); 
-      background-image:linear-gradient(
-      to left, 
-      rgba(255,0,0,0) 0%, 
-      rgba(255,0,0,0.8) 7%, 
-      rgba(255,0,0,1) 11%, 
-      rgba(255,0,0,1) 12%, 
-      rgba(255,252,0,1) 28%, 
-      rgba(1,180,7,1) 45%, 
-      rgba(0,234,255,1) 60%, 
-      rgba(0,3,144,1) 75%, 
-      rgba(255,0,198,1) 88%, 
-      rgba(255,0,198,0.8) 93%, 
-      rgba(255,0,198,0) 100%); 
-  }
-  body:after{top:initial;bottom:0px;}
-  .wraper{width:100%;position:absolute;top:0;
-    -webkit-animation:in 1s;
-    -moz-animation:in 1s;
-    -ms-animation:in 1s;
-  }
-  @-webkit-keyframes in {
-    from {-webkit-transform: translateX(-100%);}
-    to {-webkit-transform: translateX(0%);}
-  }
-  @-moz-keyframes in {
-    from {-moz-transform: translateX(-100%);}
-    to {-moz-transform: translateX(0%);}
-  }
-  @-ms-keyframes in {
-    from {-ms-transform: translateX(-100%);}
-    to {-ms-transform: translateX(0%);}
-  }
-  h1,h3{text-align:center;font-size:0.3rem;font-weight:normal;text-shadow:0 1px 0 rgba(255,255,255,0.5);}
-  h3{font-size:12px;}
-  ol{margin:10px 0.05rem 10px 0;-webkit-padding-start:0.5rem;}
-  ol li{margin-bottom:0.1rem;background:#DDD;font-size:0.2rem;position:relative;}
-  ol li:hover{background:#eee;}
-  ol li:nth-child(1),ol li:nth-child(2),ol li:nth-child(3),ol li:nth-child(1):before,ol li:nth-child(2):before,ol li:nth-child(3):before,ol li:nth-child(12n){background:#00CAFF;}
-  ol li:nth-child(1):hover,ol li:nth-child(2):hover,ol li:nth-child(3):hover,ol li:nth-child(12n):hover{background:#60DEFF;}
-  ol li:nth-child(4n+3){margin-bottom:0.4rem;}
-  ol li:before{position:absolute;top:0;left:-0.45rem;z-index:-1;content:"";display:block;background:#eee;width:0.4rem;height:100%;}
-  ol li:hover:before{background:#60DEFF;}
-  ol li:nth-child(1):before,ol li:nth-child(2):before,ol li:nth-child(3):before,ol li:nth-child(12n):before{background:#60DEFF;}
-  ol li:nth-child(1):hover:before,ol li:nth-child(2):hover:before,ol li:nth-child(3):hover:before,ol li:nth-child(12n):hover:before{background:#FA8072;}
-  ol li a{display:block;color:#444;text-decoration:none;text-shadow:0 1px 0 rgba(255,255,255,0.5);padding:10px;}
-</style>
-<script>
-	var setFontSize = function(){  
-		var width = document.documentElement.clientWidth;  
-		width = width > 640 ? 640: width;  
-		var fontSize = width/640 * 100;  
-		document.getElementsByTagName("html")[0].style.fontSize = fontSize + "px";
-	}  
-	setFontSize();
-	window.onresize = setFontSize;
-</script>
+    <meta charset="utf-8">
+    <title>iswe.github.io</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <meta name="format-detection" content="telphone=no, email=no" />
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <style>
+    html,
+    body {
+        height: 100%;
+    }
+    
+    @font-face {
+        font-family: "CODELight";
+        src: url("CODELight.otf");
+    }
+    /*@font-face { */
+    /*  font-family: "Yueheiteixi"; */
+    /*  src: url("Yueheiteixi.otf"); */
+    /*}*/
+    
+    body {
+        font-family: "CODELight", Verdana, \5B8B\4F53;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body:before,
+    body:after {
+        position: fixed;
+        z-index: 1;
+        content: "";
+        width: 100%;
+        height: 1px;
+        top: 0px;
+        background-image: -webkit-linear-gradient( to left, rgba(255, 0, 0, 0) 0%, rgba(255, 0, 0, 0.8) 7%, rgba(255, 0, 0, 1) 11%, rgba(255, 0, 0, 1) 12%, rgba(255, 252, 0, 1) 28%, rgba(1, 180, 7, 1) 45%, rgba(0, 234, 255, 1) 60%, rgba(0, 3, 144, 1) 75%, rgba(255, 0, 198, 1) 88%, rgba(255, 0, 198, 0.8) 93%, rgba(255, 0, 198, 0) 100%);
+        background-image: linear-gradient( to left, rgba(255, 0, 0, 0) 0%, rgba(255, 0, 0, 0.8) 7%, rgba(255, 0, 0, 1) 11%, rgba(255, 0, 0, 1) 12%, rgba(255, 252, 0, 1) 28%, rgba(1, 180, 7, 1) 45%, rgba(0, 234, 255, 1) 60%, rgba(0, 3, 144, 1) 75%, rgba(255, 0, 198, 1) 88%, rgba(255, 0, 198, 0.8) 93%, rgba(255, 0, 198, 0) 100%);
+    }
+    
+    body:after {
+        top: initial;
+        bottom: 0px;
+    }
+    
+    .wraper {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        -webkit-animation: in 1s;
+        -moz-animation: in 1s;
+        -ms-animation: in 1s;
+    }
+    
+    @-webkit-keyframes in {
+        from {
+            -webkit-transform: translateX(-100%);
+        }
+        to {
+            -webkit-transform: translateX(0%);
+        }
+    }
+    
+    @-moz-keyframes in {
+        from {
+            -moz-transform: translateX(-100%);
+        }
+        to {
+            -moz-transform: translateX(0%);
+        }
+    }
+    
+    @-ms-keyframes in {
+        from {
+            -ms-transform: translateX(-100%);
+        }
+        to {
+            -ms-transform: translateX(0%);
+        }
+    }
+    
+    h1,
+    h3 {
+        text-align: center;
+        font-size: 0.3rem;
+        font-weight: normal;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+    
+    h3 {
+        font-size: 12px;
+    }
+    
+    ol {
+        margin: 10px 0.05rem 10px 0;
+        -webkit-padding-start: 0.5rem;
+    }
+    
+    ol li {
+        margin-bottom: 0.1rem;
+        background: #DDD;
+        font-size: 0.2rem;
+        position: relative;
+    }
+    
+    ol li:hover {
+        background: #eee;
+    }
+    
+    ol li:nth-child(1),
+    ol li:nth-child(2),
+    ol li:nth-child(3),
+    ol li:nth-child(1):before,
+    ol li:nth-child(2):before,
+    ol li:nth-child(3):before,
+    ol li:nth-child(12n) {
+        background: #00CAFF;
+    }
+    
+    ol li:nth-child(1):hover,
+    ol li:nth-child(2):hover,
+    ol li:nth-child(3):hover,
+    ol li:nth-child(12n):hover {
+        background: #60DEFF;
+    }
+    
+    ol li:nth-child(4n+3) {
+        margin-bottom: 0.4rem;
+    }
+    
+    ol li:before {
+        position: absolute;
+        top: 0;
+        left: -0.45rem;
+        z-index: -1;
+        content: "";
+        display: block;
+        background: #eee;
+        width: 0.4rem;
+        height: 100%;
+    }
+    
+    ol li:hover:before {
+        background: #60DEFF;
+    }
+    
+    ol li:nth-child(1):before,
+    ol li:nth-child(2):before,
+    ol li:nth-child(3):before,
+    ol li:nth-child(12n):before {
+        background: #60DEFF;
+    }
+    
+    ol li:nth-child(1):hover:before,
+    ol li:nth-child(2):hover:before,
+    ol li:nth-child(3):hover:before,
+    ol li:nth-child(12n):hover:before {
+        background: #FA8072;
+    }
+    
+    ol li a {
+        display: block;
+        color: #444;
+        text-decoration: none;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+        padding: 10px;
+    }
+    </style>
+    <script>
+    var setFontSize = function() {
+        var width = document.documentElement.clientWidth;
+        width = width > 640 ? 640 : width;
+        var fontSize = width / 640 * 100;
+        document.getElementsByTagName("html")[0].style.fontSize = fontSize + "px";
+    }
+    setFontSize();
+    window.onresize = setFontSize;
+    </script>
 </head>
+
 <body>
-	<div class="wraper">
-		<h1>iswe . github . io 目录</h1>
-		<h3>" Ctrl + f "</h3>
-		<ol>
-			<li><a href="http://iswe.github.io/demo/baseCSS.css">base css</a></li>
-			<li><a href="http://daneden.github.io/animate.css/" target="_black">CSS3动画预览</a></li>
-			<li><a href="http://iswe.github.io/demo/CSS3水平垂直弹性布局.html">CSS3水平、垂直弹性布局</a></li>
-			<li><a href="http://iswe.github.io/demo/flex.html">flex</a></li>
-			<li><a href="http://iswe.github.io/demo/rem弹性布局.html">rem弹性布局</a></li>
-			<li><a href="http://iswe.github.io/demo/CSS3图片动画.html">CSS3图片动画</a></li>
-			<li><a href="http://iswe.github.io/demo/CSS3动画小集.html">CSS3动画小集</a></li>
-			<li><a href="http://iswe.github.io/demo/小于1px的线.html">小于1px的线</a></li>
-			<li><a href="http://iswe.github.io/demo/支付密码框.html">支付密码框</a></li>
-			<li><a href="http://iswe.github.io/demo/CSSDIV保持在页面底部.html">CSS:DIV保持在页面底部</a></li>
-			<li><a href="http://iswe.github.io/demo/DIV曲线.html">CSS3:DIV曲线</a></li>
-			<li><a href="http://iswe.github.io/demo/clip裁剪.html">clip裁剪</a></li>
-			<li><a href="http://iswe.github.io/demo/中文字体的英文名.html">中文字体的英文名</a></li>
-			<li><a href="http://iswe.github.io/demo/阅读并同意服务协议.html">阅读并同意《服务协议》</a></li>
-			<li><a href="http://iswe.github.io/demo/头尾固定中间滚动.html">头尾固定中间滚动</a></li>
-			<li><a href="http://iswe.github.io/demo/表格边框.html">表格边框</a></li>
-			<li><a href="http://iswe.github.io/demo/CSS3中的几何图形.html">CSS3中的几何图形</a></li>
-			<li><a href="http://iswe.github.io/demo/在页面上直接编辑样式.html">在页面上直接编辑样式</a></li>
-			<li><a href="http://iswe.github.io/demo/特殊符号.html">特殊符号</a></li>
-      			<li><a href="http://iswe.github.io/demo/chrome代理插件.zip">chrome代理插件</a></li>
-      			<li><a href="http://iswe.github.io/demo/Sublime配置sass保存即编译和语法高亮.html">Sublime配置sass保存即编译和语法高亮</a></li>
-		</ol>
-		<h3>iswe . github . io</h3>
-	</div>
+    <div class="wraper">
+        <h1>iswe . github . io 目录</h1>
+        <h3>" Ctrl + f "</h3>
+        <ol>
+<li><a href="http://iswe.github.io/demo/表格边框.html">表格边框</a></li>
+<li><a href="http://iswe.github.io/demo/特殊符号.html">特殊符号</a></li>
+<li><a href="http://iswe.github.io/demo/头尾固定中间滚动.html">头尾固定中间滚动</a></li>
+<li><a href="http://iswe.github.io/demo/小于1px的线.html">小于1px的线</a></li>
+<li><a href="http://iswe.github.io/demo/页面自动刷新browser-sync.html">页面自动刷新browser-sync</a></li>
+<li><a href="http://iswe.github.io/demo/阅读并同意服务协议.html">阅读并同意《服务协议》</a></li>
+<li><a href="http://iswe.github.io/demo/在页面上直接编辑样式.html">在页面上直接编辑样式</a></li>
+<li><a href="http://iswe.github.io/demo/支付密码框.html">支付密码框</a></li>
+<li><a href="http://iswe.github.io/demo/中文字体的英文名.html">中文字体的英文名</a></li>
+<li><a href="http://iswe.github.io/demo/最基础的CSS3动画.html">最基础的CSS3动画</a></li>
+<li><a href="http://iswe.github.io/demo/baseCSS.css">base css</a></li>
+<li><a href="http://iswe.github.io/demo/box-shadow.html">box-shadow</a></li>
+<li><a href="http://iswe.github.io/demo/clip裁剪.html">clip裁剪</a></li>
+<li><a href="http://iswe.github.io/demo/clone_push_hexo.html">clone_push_hexo</a></li>
+<li><a href="http://iswe.github.io/demo/CSS3_flex_分散对齐.html">CSS3_flex_分散对齐</a></li>
+<li><a href="http://iswe.github.io/demo/CSS3垂直居中.html">CSS3垂直居中</a></li>
+<li><a href="http://iswe.github.io/demo/CSS3动画小集.html">CSS3动画小集</a></li>
+<li><a href="http://iswe.github.io/demo/CSS3开门效果.html">CSS3开门效果</a></li>
+<li><a href="http://daneden.github.io/animate.css/" target="_black">CSS3动画预览</a></li>
+<li><a href="http://iswe.github.io/demo/CSS3水平垂直弹性布局.html">CSS3水平垂直弹性布局</a></li>
+<li><a href="http://iswe.github.io/demo/CSS3图片动画.html">CSS3图片动画</a></li>
+<li><a href="http://iswe.github.io/demo/CSS3中的几何图形.html">CSS3中的几何图形</a></li>
+<li><a href="http://iswe.github.io/demo/CSS3左右两边分散对齐.html">CSS3左右两边分散对齐</a></li>
+<li><a href="http://iswe.github.io/demo/CSS命名参考表.html">CSS命名参考表</a></li>
+<li><a href="http://iswe.github.io/demo/CSSDIV保持在页面底部.html">CSS:DIV保持在页面底部</a></li>
+<li><a href="http://iswe.github.io/demo/DIV曲线.html">DIV曲线</a></li>
+<li><a href="http://iswe.github.io/demo/flex.html">flex</a></li>
+<li><a href="http://iswe.github.io/demo/font-test.html">font-test</a></li>
+<li><a href="http://iswe.github.io/demo/git问题.html">git问题</a></li>
+<li><a href="http://iswe.github.io/demo/rem弹性布局.html">rem弹性布局</a></li>
+<li><a href="http://iswe.github.io/demo/ruby-sass.html">ruby-sass</a></li>
+<li><a href="http://iswe.github.io/demo/Sublime配置sass保存即编译和语法高亮.html">Sublime配置sass保存即编译和语法高亮</a></li>
+<li><a href="http://iswe.github.io/demo/text-align-justify.html">text-align-justify</a></li>
+<li><a href="http://iswe.github.io/demo/chrome代理插件.zip">chrome代理插件</a></li>
+        </ol>
+        <h3>iswe . github . io</h3>
+    </div>
 </body>
+
 </html>

@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>git问题</title>
+</head>
+
+<body>
+    <p>问题1</p>
+<p>"![rejected] master -> master (fetch first)"</p>
+<p>$ git fetch</p>
+<br>
+<p>问题2</p>
+<p>"![rejected] master -> master (non-fast-forward)"</p>
+<p>$ git pull origin master</p>
+<br>
+<p>问题3</p>
+<p>remote: Invalid username or password.</p>
+<p>fatal: Authentication failed for 'https://github.com/xxx.git/'</p>
+<p>$ git config --global credential.helper store</p>
+<br>
+<p>问题4</p>
+<p>fatal: Unable to create 'D:/xxx.github.com/.git/index.lock': File exists.</p>
+<p>If no other git process is currently running, this probably means a</p>
+<p>git process crashed in this repository earlier. Make sure no other git</p>
+<p>process is running and remove the file manually to continue.</p>
+<p>$ rm -f ./.git/index.lock</p>
+</body>
+
+</html>
