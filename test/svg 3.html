@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <style>
+    .text--line {
+        font-size: 5em;
+    }
+    
+    svg {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .text-copy {
+        fill: none;
+        stroke: rgba(46, 177, 245, 1);
+        stroke-width: 1px;
+        stroke-dasharray: 800;
+        stroke-dashoffset: 800;
+        -webkit-animation: dash 4s infinite linear;
+    }
+    
+    .text-copy:nth-child(2) {
+        stroke: rgba(46, 177, 245, 0.25);
+        stroke-dasharray: 500;
+        stroke-dashoffset: 500;
+        -webkit-transform: rotate(180deg);
+        -webkit-transform-origin: 50% 50%;
+    }
+    
+    @-webkit-keyframes dash {
+        from {
+            stroke-dashoffset: 30;
+            stroke-dasharray: 30;
+        }
+        to {
+            stroke-dashoffset: 0;
+            stroke-dasharray: 0;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <svg version="1.1" class="text-copy1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+        <path class="text-copy" d="M20.275,38.725h-0.549
+            C9.384,38.725,1,30.342,1,20v0C1,9.658,9.384,1.275,19.725,1.275h0.549C30.616,1.275,39,9.658,39,20v0
+            C39,30.342,30.616,38.725,20.275,38.725z" />
+        <path class="text-copy" d="M20,32.896L20,32.896
+            c-7.123,0-12.896-5.774-12.896-12.896v0c0-7.123,5.774-12.896,12.896-12.896h0c7.123,0,12.896,5.774,12.896,12.896v0
+            C32.896,27.123,27.123,32.896,20,32.896z" />
+    </svg>
+</body>
+
+</html>
