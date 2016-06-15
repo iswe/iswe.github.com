@@ -1,8 +1,39 @@
+<!DOCTYPE html>
+<html>
 
-justify-content:flex-start
-justify-content:flex-end
-justify-content:center
-justify-content:space-around
-justify-content: space-between;
-    display: -webkit-flex;
-    display:-webkit-box;
+<head>
+    <title>CSS3_flex_分散对齐</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1;" name="viewport">
+    <style>
+    #main {
+        width: 400px;
+        height: 150px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    #main div {
+        width: 70px;
+        height: 70px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div style="background-color:coral;"></div>
+        <div style="background-color:lightblue;"></div>
+        <div style="background-color:khaki;"></div>
+        <div style="background-color:pink;"></div>
+    </div>
+    <p>justify-content: flex-start;</p>
+    <p>justify-content: flex-end;</p>
+    <p>justify-content: center;</p>
+    <p>justify-content: space-around;</p>
+    <p>justify-content: space-between;</p>
+    <p>display: -webkit-flex;</p>
+    <p>display:-webkit-box;</p>
+</body>
+
+</html>
