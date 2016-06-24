@@ -8,25 +8,41 @@
 </head>
 
 <body>
-    <p>问题1</p>
-<p>"![rejected] master -> master (fetch first)"</p>
-<p>$ git fetch</p>
-<br>
-<p>问题2</p>
-<p>"![rejected] master -> master (non-fast-forward)"</p>
-<p>$ git pull origin master</p>
-<br>
-<p>问题3</p>
-<p>remote: Invalid username or password.</p>
-<p>fatal: Authentication failed for 'https://github.com/xxx.git/'</p>
-<p>$ git config --global credential.helper store</p>
-<br>
-<p>问题4</p>
-<p>fatal: Unable to create 'D:/xxx.github.com/.git/index.lock': File exists.</p>
-<p>If no other git process is currently running, this probably means a</p>
-<p>git process crashed in this repository earlier. Make sure no other git</p>
-<p>process is running and remove the file manually to continue.</p>
-<p>$ rm -f ./.git/index.lock</p>
+<style>
+    textarea{
+        font: 12px/24px "";
+        color: #666;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 5px;
+        border:none;
+        white-space: pre-wrap;
+        background-color: #fff;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='48'><rect fill='#fff' x='0' y='0' width='100%' height='24'/><rect fill='#f1f1f1' x='0' y='24' width='100%' height='24'/></svg>");
+    }
+</style>
+<textarea id="textarea" disabled='disabled'>
+问题1
+"![rejected] master -> master (fetch first)"
+$ git fetch
+
+问题2
+"![rejected] master -> master (non-fast-forward)"
+$ git pull origin master
+
+问题3
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/xxx.git/'
+$ git config --global credential.helper store
+
+问题4
+fatal: Unable to create 'D:/xxx.github.com/.git/index.lock': File exists.
+If no other git process is currently running, this probably means a
+git process crashed in this repository earlier. Make sure no other git
+process is running and remove the file manually to continue.
+$ rm -f ./.git/index.lock
+</textarea>
+<script>document.getElementById("textarea").style.height=document.getElementById("textarea").scrollHeight+"px";</script>
 </body>
 
 </html>
