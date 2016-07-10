@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="page.css">
+</head>
+
+<body>
+    <section>
+        <section>
+            <header>
+                <div class="header_left">
+                    <i class="iconMigrate_back"></i>
+                </div>
+                <div class="header_center">
+                    开通旺财账户
+                </div>
+                <div class="header_right">
+                    <!-- <i class="iconMigrate_headmenu"></i> -->
+                </div>
+            </header>
+        </section>
+        <section class="p_t44">
+            <div class="paui_cells m_t15">
+                <div class="paui_cell">
+                    <div class="paui_cell_hd word5">
+                        <p class="word2to5">姓名</p>
+                    </div>
+                    <div class="paui_cell_bd">
+                        刘汉阳
+                    </div>
+                    <div class="paui_cell_ft">
+                    </div>
+                </div>
+                <div class="paui_cell">
+                    <div class="paui_cell_hd word5">
+                        <p class="word4to5">身份证号</p>
+                    </div>
+                    <div class="paui_cell_bd">
+                        440534198793933435
+                    </div>
+                    <div class="paui_cell_ft">
+                    </div>
+                </div>
+            </div>
+            <div class="paui_cells">
+                <div class="paui_cell">
+                    <div class="paui_cell_hd word5">
+                        <p class="word4to5">手机号码</p>
+                    </div>
+                    <div class="paui_cell_bd">
+                        18334533456
+                    </div>
+                    <div class="paui_cell_ft">
+                    </div>
+                </div>
+            </div>
+            <div class="paui_cells">
+                <div class="paui_cell">
+                    <div class="paui_cell_hd word5">
+                        <p class="word3to5">验证码</p>
+                    </div>
+                    <div class="paui_cell_bd">
+                        <div class="paui_inputBox">
+                            <input type="text" placeholder="请输入验证码" class="paui_input" value="dence">
+                            <i class="iconMigrate_clearAll"></i>
+                        </div>
+                    </div>
+                    <div class="paui_cell_ft">
+                        <div class="m_l10"><img class="yzm" src="img02.png"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="paui_cells">
+                <div class="paui_cell">
+                    <div class="paui_cell_hd word5">
+                        <p class="">短信验证码</p>
+                    </div>
+                    <div class="paui_cell_bd">
+                        <div class="paui_inputBox">
+                            <input type="text" placeholder="请输入短信验证码" class="paui_input" value="567578">
+                            <i class="iconMigrate_clearAll"></i>
+                        </div>
+                    </div>
+                    <div class="paui_cell_ft">
+                        <div class="dxyzm m_l10">重新获取(60秒)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="Tips1">
+                <p>动态密码已发送至手机186******3478,请在<span class="c_ff5426">120</span>秒内输入</p>
+            </div>
+            <div class="Tips1">
+                <label for="x1" class="label_inline">
+                    <input type="checkbox" name="radio1" class="paui_check" id="x1"><i class="iconMigrate_radio"></i>
+                     我已阅读并同意
+                </label>
+                <p class="m_l15"><span class="c_blue">《平安付账户服务协议》</span><span class="c_blue">《大华基金前置服务协议》</span></p>
+            </div>
+            <div class="paui_btnY">
+                <div class="paui_btn_primary" onclick="window.location.href='2.html'">开 通</div>
+            </div>
+        </section>
+
+    </section>
+    <script src="jquery-1.12.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".paui_input").click(function() {
+                $(".iconMigrate_clearAll").css("display", "none")
+                $(this).siblings(".iconMigrate_clearAll").css("display", "block");
+            });
+            $(".iconMigrate_clearAll").click(function() {
+                $(this).siblings(".paui_input").val("");
+                $(this).css("display", "none");
+            });
+        });
+    </script>
+</body>
+
+</html>

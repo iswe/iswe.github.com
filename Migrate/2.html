@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="page.css">
+</head>
+
+<body>
+    <section>
+        <section>
+            <header>
+                <div class="header_left">
+                    <i class="iconMigrate_back" onclick="window.location.href='index.html'"></i>
+                </div>
+                <div class="header_center">
+                    绑定银行卡
+                </div>
+                <div class="header_right">
+                    <!-- <i class="iconMigrate_headmenu"></i> -->
+                </div>
+            </header>
+        </section>
+        <section class="p_t44">
+            <div class="steps">
+                <span class="step c_ff5426">1.绑定银行卡</span><i class="iconMigrate_step"></i>
+                <span class="step">2.设置密码</span><i class="iconMigrate_step"></i>
+                <span class="step">3.完成</span>
+            </div>
+            <div class="Tips2">
+                <p>为您开通银行银行直通账户(寿险版)，请绑定本人实体卡一遍校验身份</p>
+            </div>
+            <div class="paui_cells">
+                <div class="paui_cell">
+                    <div class="paui_cell_hd word4">
+                        <p class="">银行卡号</p>
+                    </div>
+                    <div class="paui_cell_bd">
+                        <div class="paui_inputBox">
+                            <input type="text" placeholder="请输入银行卡号" class="paui_input bankNum" value="">
+                            <i class="iconMigrate_clearAll clearMatchBank"></i>
+                        </div>
+                    </div>
+                    <div class="paui_cell_ft">
+                    </div>
+                </div>
+            </div>
+            <div class="paui_cells">
+                <div class="paui_cell">
+                    <div class="paui_cell_hd word4">
+                        <p class="">手机号码</p>
+                    </div>
+                    <div class="paui_cell_bd">
+                        18334533456
+                    </div>
+                    <div class="paui_cell_ft m_l10">
+                        <span class="c_ff5426 modify">修改</span>
+                    </div>
+                </div>
+                <div class="paui_cell dsn">
+                    <div class="paui_cell_hd word4">
+                        <p class="">手机号码</p>
+                    </div>
+                    <div class="paui_cell_bd">
+                        <div class="paui_inputBox">
+                            <input type="text" placeholder="请输入手机号码" class="paui_input newP" value="">
+                            <i class="iconMigrate_clearAll"></i>
+                        </div>
+                    </div>
+                    <div class="paui_cell_ft m_l10">
+                        <span class="c_ff5426">获取验证码</span>
+                    </div>
+                </div>
+            </div>
+            <div class="paui_cells dtmm dsn">
+                <div class="paui_cell">
+                    <div class="paui_cell_hd word4">
+                        <p class="">动态密码</p>
+                    </div>
+                    <div class="paui_cell_bd">
+                        <div class="paui_inputBox">
+                            <input type="text" placeholder="请输入动态密码" class="paui_input" value="666666">
+                            <i class="iconMigrate_clearAll"></i>
+                        </div>
+                    </div>
+                    <div class="paui_cell_ft">
+                    </div>
+                </div>
+            </div>
+            <div class="Tips1 txtips dsn">
+                <p>动态密码已发送至手机159******9689,请在<span class="c_ff5426">120</span>秒内输入</p>
+            </div>
+            <div class="Tips1">
+                <label for="x1" class="label_inline">
+                        <input type="checkbox" name="radio1" class="paui_check" id="x1"><i class="iconMigrate_radio"></i> 我已阅读并同意
+                    </label>
+                <span class="c_blue">《平安直通账户(寿险版)账户服务协议》</span>
+            </div>
+            <div class="paui_btnY">
+                <div class="paui_btn_primary" onclick="window.location.href='3.html'">下一步</div>
+            </div>
+        </section>
+
+    </section>
+    <script src="jquery-1.12.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".bankNum").click(function() {
+                $(".iconMigrate_clearAll").css("display", "none")
+                $(this).val("4405****3435");
+                $(this).siblings(".iconMigrate_clearAll").css("display", "block");
+                $(this).parents(".paui_cells").after('<div class="Tips1 matchBank"><p>招商银行</p></div>')
+            });
+            $(".clearMatchBank").click(function() {
+                $(this).css("display", "none");
+                $(this).siblings(".bankNum").val("");
+                $(".matchBank").remove();
+            });
+
+            $(".modify").click(function() {
+                $(".iconMigrate_clearAll").css("display", "none")
+                $(this).css("display", "none");
+                $(this).parents(".paui_cell").addClass("dsn").siblings(".paui_cell").removeClass("dsn").find(".iconMigrate_clearAll").css("display", "block");
+                $(".dtmm,.txtips").removeClass("dsn");
+                $(".newP").focus().val("15988889689");
+            });
+            // $(".dtmm").click(function() {
+            //     $(this).find(".paui_input").val("666666");
+            // })
+            // $(".dtmm .iconMigrate_clearAll").click(function() {
+            //     var txt = $(this).siblings(".paui_input").val();
+            //     alert(txt);
+            //     $(this).siblings(".paui_input").val("eee");
+            // })
+            $(".paui_input").click(function() {
+                $(".iconMigrate_clearAll").css("display", "none")
+                $(this).siblings(".iconMigrate_clearAll").css("display", "block");
+            });
+            $(".iconMigrate_clearAll").click(function() {
+                $(this).siblings(".paui_input").val("");
+                $(this).css("display", "none");
+            });
+        });
+    </script>
+</body>
+
+</html>

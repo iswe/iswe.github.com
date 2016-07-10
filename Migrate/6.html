@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="page.css">
+</head>
+
+<body>
+    <section>
+        <div class="Award">
+            <div class="Award_desc">
+                <p><span class="f15">尊贵的刘汉阳</span>先生：</p>
+                <p class="m_t10">您已经开通平安直通账户(寿险版)，</p>
+                <p>现在登录可领取10%高收益理财产品礼包。</p>
+            </div>
+            <div class="Award_btn">立即领取大礼包</div>
+        </div>
+    </section>
+    <section>
+        <div class="silderUpBox">
+            <div class="silderUpBox_title">
+                <i class="iconMigrate_close"></i>
+                <p>设置登录密码</p>
+            </div>
+            <div class="Tips2">
+                <p>尊贵的刘汉阳，为了您的账户安全，请设置登录密码</p>
+            </div>
+            <div class="paui_cells">
+                <div class="paui_cell">
+                    <div class="paui_cell_hd word4">
+                        <p class="">登录密码</p>
+                    </div>
+                    <div class="paui_cell_bd">
+                        <div class="paui_inputBox">
+                            <input type="password" placeholder="请设置登录密码" class="paui_input" value="">
+                            <i class="iconMigrate_clearAll"></i>
+                        </div>
+                    </div>
+                    <div class="paui_cell_ft">
+                    </div>
+                </div>
+                <div class="paui_cell">
+                    <div class="paui_cell_hd word4">
+                        <p class="">确认密码</p>
+                    </div>
+                    <div class="paui_inputBox">
+                        <input type="password" placeholder="请确认登录密码" class="paui_input" value="">
+                        <i class="iconMigrate_clearAll"></i>
+                    </div>
+                    <div class="paui_cell_ft">
+                    </div>
+                </div>
+            </div>
+            <div class="paui_btnY">
+                <div class="paui_btn_primary2" onclick="window.location.href='7.html'">确 定</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="jquery-1.12.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".Award_btn").click(function() {
+                $(".silderUpBox").animate({
+                    top: "0"
+                });
+            });
+            $(".iconMigrate_close").click(function() {
+                $(".silderUpBox").animate({
+                    top: "100%"
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".paui_input").click(function() {
+                $(".iconMigrate_clearAll").css("display", "none")
+                $(this).val("888888");
+                $(this).siblings(".iconMigrate_clearAll").css("display", "block");
+            });
+            $(".iconMigrate_clearAll").click(function() {
+                $(this).siblings(".paui_input").val("");
+                $(this).css("display", "none");
+            });
+        });
+    </script>
+</body>
+
+</html>
