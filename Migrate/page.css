@@ -467,16 +467,6 @@ header .header_link {
 	margin-top: 15px;
 }
 
-.paui_input {
-	color: #333;
-	font-size: 17px;
-	width: 100%;
-	border: 0;
-	outline: 0;
-	-webkit-appearance: none;
-	background-color: rgba(0, 0, 0, 0);
-}
-
 .paui_check {
 	position: absolute;
 	left: -9999px;
@@ -532,10 +522,17 @@ header .header_link {
 }
 
 .paui_input {
+	color: #333;
 	font-size: 15px;
+	width: 100%;
 	height: 18px;
 	line-height: 18px;
 	padding: 11px 0;
+	display: block;
+	border: 0;
+	outline: 0;
+	-webkit-appearance: none;
+	background-color: rgba(0, 0, 0, 0);
 }
 
 .steps {
