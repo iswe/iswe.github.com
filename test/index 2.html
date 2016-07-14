@@ -1,0 +1,473 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <style type="text/css">
+        body {
+            font-size: 12px;
+            /*background-color: #443B3C;*/
+        }
+        
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .wui_cell {
+            position: relative;
+            height: 60px;
+            width: 1032px;
+            margin: 0 auto;
+            background-color: #fff;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: flex;
+        }
+        
+        .wui_cell + .wui_cell {
+            margin-top: 20px;
+        }
+        
+        .wui_cell:before {
+            content: " ";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 1px;
+            border-top: 1px solid #E6E6E6;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+        }
+        
+        .wui_cell:after {
+            content: " ";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            border-bottom: 1px solid #E6E6E6;
+            -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+            -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+        }
+        
+        .wui_cell_hd {
+            width: 30px;
+            padding-top: 10px;
+            padding-right: 6px;
+            line-height: 1.5;
+            text-align: right;
+        }
+        
+        .wui_cell_hd:before {
+            content: " ";
+            position: absolute;
+            left: 36px;
+            top: 0;
+            width: 0;
+            height: 100%;
+            border-right: 1px solid #E6E6E6;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: scaleX(0.5);
+            transform: scaleX(0.5);
+        }
+        
+        .wui_cell_bd {
+            width: 900px;
+            margin: 0 10px;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100.5' height='100%'><rect fill='#f1f1f1' x='100' y='0' width='0.5' height='100%'/></svg>");
+        }
+        
+        .wui_cell_ft {
+            width: 70px;
+            padding-top: 10px;
+            padding-left: 6px;
+            line-height: 1.5;
+        }
+        
+        .wui_cell_ft:before {
+            content: " ";
+            position: absolute;
+            right: 76px;
+            top: 0;
+            width: 0;
+            height: 100%;
+            border-right: 1px solid #E6E6E6;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: scaleX(0.5);
+            transform: scaleX(0.5);
+        }
+        
+        .time_line {
+            font-size: 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .time_line .tline {
+            position: relative;
+            color: #aaa;
+            font-size: 8px;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            display: inline-block;
+        }
+        
+        .time_line_sp {
+            font-size: 0;
+        }
+        
+        .sptime {
+            position: relative;
+            display: inline-block;
+            height: 10px;
+        }
+        
+        .sptime:hover {
+            box-shadow: 0px 0px 0px 2px #ccc;
+            z-index: 1;
+        }
+        
+        .sptime:first-child {
+            border-radius: 5px 0 0 5px;
+        }
+        
+        .sptime:last-child {
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .sptime:nth-child(1),
+        .sptime:nth-child(11),
+        .sptime:nth-child(21),
+        .sptime:nth-child(31),
+        .sptime:nth-child(41) {
+            background-color: #FEF065;
+        }
+        
+        .sptime:nth-child(2),
+        .sptime:nth-child(12),
+        .sptime:nth-child(22),
+        .sptime:nth-child(32),
+        .sptime:nth-child(42) {
+            background-color: #C9E772;
+        }
+        
+        .sptime:nth-child(3),
+        .sptime:nth-child(13),
+        .sptime:nth-child(23),
+        .sptime:nth-child(33),
+        .sptime:nth-child(43) {
+            background-color: #81EE81;
+        }
+        
+        .sptime:nth-child(4),
+        .sptime:nth-child(14),
+        .sptime:nth-child(24),
+        .sptime:nth-child(34),
+        .sptime:nth-child(44) {
+            background-color: #61E4BE;
+        }
+        
+        .sptime:nth-child(5),
+        .sptime:nth-child(15),
+        .sptime:nth-child(25),
+        .sptime:nth-child(35),
+        .sptime:nth-child(45) {
+            background-color: #78E6E5;
+        }
+        
+        .sptime:nth-child(6),
+        .sptime:nth-child(16),
+        .sptime:nth-child(26),
+        .sptime:nth-child(36),
+        .sptime:nth-child(46) {
+            background-color: #79C1FC;
+        }
+        
+        .sptime:nth-child(7),
+        .sptime:nth-child(17),
+        .sptime:nth-child(27),
+        .sptime:nth-child(37),
+        .sptime:nth-child(47) {
+            background-color: #7D87FA;
+        }
+        
+        .sptime:nth-child(8),
+        .sptime:nth-child(18),
+        .sptime:nth-child(28),
+        .sptime:nth-child(48),
+        .sptime:nth-child(48) {
+            background-color: #D66DF6;
+        }
+        
+        .sptime:nth-child(9),
+        .sptime:nth-child(19),
+        .sptime:nth-child(29),
+        .sptime:nth-child(39),
+        .sptime:nth-child(49) {
+            background-color: #FA78DA;
+        }
+        
+        .sptime:nth-child(10),
+        .sptime:nth-child(20),
+        .sptime:nth-child(30),
+        .sptime:nth-child(40),
+        .sptime:nth-child(50) {
+            background-color: #F577A4;
+        }
+        
+        .ht {
+            display: inline-block;
+            margin-top: 12px;
+        }
+        
+        .pop {
+            position: absolute;
+            z-index: 1;
+            top: 22px;
+            left: 0;
+            font-size: 10px;
+            line-height: 1.5;
+            width: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 2px 2px #ddd;
+        }
+        
+        .pop:before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: -6px;
+            left: 8px;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+            border-left: 1px solid #ddd;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+        }
+        
+        .title {
+            width: 1032px;
+            margin: 50px auto 5px;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: flex;
+        }
+        
+        .title div {
+            -webkit-flex: 1;
+            -moz-flex: 1;
+            flex: 1;
+        }
+        
+        .title div:nth-child(1) {
+            padding-left: 5px;
+        }
+        
+        .title div:nth-child(2) {
+            padding-right: 32px;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="myDiv">
+        <div class="title">
+            <div>序列</div>
+            <div>总用时</div>
+        </div>
+        <div class="wui_cell">
+            <div class="wui_cell_hd">
+                <p class="ht">1</p>
+            </div>
+            <div class="wui_cell_bd">
+                <div class="time_line">
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                </div>
+                <div class="time_line_sp">
+                    <div class="sptime">500</div>
+                    <div class="sptime">500</div>
+                    <div class="sptime">500</div>
+                    <div class="sptime">500</div>
+                    <div class="sptime">500</div>
+                    <div class="sptime">500</div>
+                    <div class="sptime">500</div>
+                    <div class="sptime">500</div>
+                    <div class="sptime">500</div>
+                </div>
+            </div>
+            <div class="wui_cell_ft">
+                <span class="ht"></span>ms
+            </div>
+        </div>
+        <div class="wui_cell">
+            <div class="wui_cell_hd">
+                <p class="ht">2</p>
+            </div>
+            <div class="wui_cell_bd">
+                <div class="time_line">
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                </div>
+                <div class="time_line_sp">
+                    <div class="sptime">300</div>
+                    <div class="sptime">400</div>
+                    <div class="sptime">500</div>
+                    <div class="sptime">600</div>
+                </div>
+            </div>
+            <div class="wui_cell_ft">
+                <span class="ht"></span>ms
+            </div>
+        </div>
+        <div class="wui_cell">
+            <div class="wui_cell_hd">
+                <p class="ht">3</p>
+            </div>
+            <div class="wui_cell_bd">
+                <div class="time_line">
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                </div>
+                <div class="time_line_sp">
+                    <div class="sptime">700</div>
+                    <div class="sptime">100</div>
+                    <div class="sptime">848</div>
+                    <div class="sptime">243</div>
+                    <div class="sptime">687</div>
+                    <div class="sptime">976</div>
+                </div>
+            </div>
+            <div class="wui_cell_ft">
+                <span class="ht"></span>ms
+            </div>
+        </div>
+        <div class="wui_cell">
+            <div class="wui_cell_hd">
+                <p class="ht">4</p>
+            </div>
+            <div class="wui_cell_bd">
+                <div class="time_line">
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                    <div class="tline"></div>
+                </div>
+                <div class="time_line_sp">
+                    <div class="sptime">234</div>
+                    <div class="sptime">233</div>
+                    <div class="sptime">545</div>
+                    <div class="sptime">424</div>
+                    <div class="sptime">453</div>
+                    <div class="sptime">445</div>
+                    <div class="sptime">313</div>
+                    <div class="sptime">213</div>
+                    <div class="sptime">78</div>
+                    <div class="sptime">346</div>
+                    <div class="sptime">453</div>
+                    <div class="sptime">786</div>
+                    <div class="sptime">1134</div>
+                    <div class="sptime">78.3</div>
+                    <div class="sptime">204</div>
+                    <div class="sptime">373</div>
+                    <div class="sptime">786</div>
+                    <div class="sptime">786</div>
+                    <div class="sptime">538</div>
+                    <div class="sptime">1796</div>
+                </div>
+            </div>
+            <div class="wui_cell_ft">
+                <span class="ht"></span>ms
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="jquery-1.12.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var time_line_sp_length = $(".time_line_sp").length - 1;
+            for (var i = 0; i <= time_line_sp_length; i++) {
+
+                var length_sptime = $(".time_line_sp").eq(i).find(".sptime").length;
+
+                var txt = 0;
+                for (var z = 0; z < length_sptime; z++) {
+                    var sptime_text = parseFloat($('.time_line_sp').eq(i).children('.sptime').eq(z).text());
+                    txt +=sptime_text;
+                }
+                $(".time_line_sp").eq(i).parent(".wui_cell_bd").siblings(".wui_cell_ft").find("span").text(txt);
+
+                var math = Math.ceil(txt / 4500);
+                for (var y = 0; y <= length_sptime; y++) {
+                    var sptime_text = $('.time_line_sp').eq(i).children('.sptime').eq(y).text();
+                    $('.time_line_sp').eq(i).children('.sptime').eq(y).css("width", sptime_text / 5 / math);
+                }
+
+
+                var length_tline = $(".time_line_sp").eq(i).siblings(".time_line").find(".tline").length - 1;
+                for (var x = 0; x <= length_tline; x++) {
+                    $(".time_line_sp").eq(i).siblings(".time_line").children(".tline").eq(x).text(500 * (x + 1) * math + "ms");
+                }
+            }
+
+
+            $(".sptime").mouseover(function() {
+                $(this).append('<div class="pop"><p>动作：<span>启动画面</span></p><p>用时：<span>400ms</span></p></div>')
+            })
+            $(".sptime").mouseleave(function() {
+                $(".pop").remove();
+            })
+
+        });
+    </script>
+</body>
+
+</html>

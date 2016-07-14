@@ -1,3 +1,4 @@
+
 <html>
 
 <head>
@@ -10,88 +11,20 @@
     <style type="text/css">
     .div1 {
         width: 100%;
-        height: 30px;
+        height: 300px;
         border-bottom: 1px solid #f60;
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='0.5'><rect fill='#f60' x='0' y='0' width='100%' height='0.5'/></svg>");
-        background-repeat: no-repeat;
-        background-position: 0px 22px;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100%'><rect fill='#f60' x='0' y='0' width='1' height='100%'/></svg>");
+        /*background-repeat: no-repeat;*/
+        /*background-position: 0px 22px;*/
     }
     
-    .div2 {
-        margin-top: 10px;
-        width: 30px;
-        height: 30px;
-        background-color: rgba(255, 102, 0, 0.2);
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><circle xmlns='http://www.w3.org/2000/svg' cx='5' cy='5' r='5' fill='#f90'/></svg>");
-        background-repeat: no-repeat;
-        background-position: center;
-    }
     
-    .p1 {
-        border-top: 1px solid #f60;
-        position: relative;
-    }
-    
-    .p1:after {
-        position: absolute;
-        content: "";
-        left: 0;
-        bottom: -2px;
-        width: 100%;
-        height: 1px;
-        background-color: #f60;
-        -webkit-transform: scaleY(0.2);
-        -webkit-transform-origin: 0 0;
-    }
-    
-    .mydiv {
-        width: 300px;
-        height: 200px;
-        position: relative;
-    }
-    
-    .mydiv:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        display: block;
-        content: "";
-        width: 600px;
-        height: 400px;
-        background-color: #FFF5F5;
-        border: 1px solid #f60;
-        border-radius: 5px;
-        -webkit-transform: scale(0.5, 0.5);
-        -webkit-transform-origin: 0 0;
-    }
     </style>
 </head>
 
 <body>
-    <div class="div1">SVG1</div>
-    <div class="div2">SVG2</div>
-    <p class="p1">SVG</p>
-    <div class="mydiv">
-        <style>
-    textarea{
-        font: 12px/24px "";
-        color: #666;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 0 5px;
-        border:none;
-        white-space: pre-wrap;
-        background-color: #fff;
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='48'><rect fill='#fff' x='0' y='0' width='100%' height='24'/><rect fill='#f1f1f1' x='0' y='24' width='100%' height='24'/></svg>");
-    }
-</style>
-<textarea id="textarea" disabled='disabled'>
--webkit-transform: scale(0.5,0.5);//缩放
--webkit-transform-origin: 0 0;//基点
-</textarea>
-<script>document.getElementById("textarea").style.height=document.getElementById("textarea").scrollHeight+"px";</script>
-    </div>
+    <div class="div1"></div>
+    
 </body>
 
 </html>
