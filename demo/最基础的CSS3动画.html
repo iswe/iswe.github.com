@@ -1,37 +1,76 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta content="charset=utf-8" />
+    <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
     <title>最基础的CSS3动画</title>
+    <style>
+        .myDiv {
+            width: 100px;
+            height: 100px;
+            background-color: #f60;
+        }
+        
+        .myDiv:hover {
+            transition: width 1s, height 1s;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
 </head>
 
 <body>
-<style>
-    textarea{
-        font: 12px/24px "";
-        color: #666;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 0 5px;
-        border:none;
-        white-space: pre-wrap;
-        background-color: #fff;
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='48'><rect fill='#fff' x='0' y='0' width='100%' height='24'/><rect fill='#f1f1f1' x='0' y='24' width='100%' height='24'/></svg>");
-    }
-</style>
+    <style>
+        textarea {
+            font: 12px/24px "";
+            color: #666;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 5px;
+            border: none;
+            white-space: pre-wrap;
+            background-color: #fff;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='48'><rect fill='#fff' x='0' y='0' width='100%' height='24'/><rect fill='#f1f1f1' x='0' y='24' width='100%' height='24'/></svg>");
+        }
+    </style>
+    <div class="myDiv transition"> :hover
+    </div>
 <textarea id="textarea" disabled='disabled'>
+//html
+<div class="myDiv transition">  
+</div>
+
+//CSS
+.myDiv{
+    width: 100px;
+    height: 100px;
+    background-color: #f60;
+}
 .transition{
-	transition: font-size 1s; //执行动画的属性和动画所需要的时间
-	transition: width 1s;     //执行动画的属性和动画所需要的时间
-	transition: transform 1s; //执行动画的属性和动画所需要的时间
-	font-size: 24px;
-	width: 200px;
-	transform: rotateY(28deg) translateZ(20.839px);
+    transition: font-size 1s; //执行动画的属性和动画所需要的时间
+    transition: width 1s;     //执行动画的属性和动画所需要的时间
+    transition: transform 1s; //执行动画的属性和动画所需要的时间
+    font-size: 24px;
+    width: 200px;
+    transform: rotateY(28deg) translateZ(20.839px);
+}
+
+//动画只执行一次，停在最后一帧
+.tst {
+    animation:tst 0.25s;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards; 
+}
+@keyframes tst{
+    100%{
+        transform:scale(1,1);
+    }
 }
 </textarea>
-<script>document.getElementById("textarea").style.height=document.getElementById("textarea").scrollHeight+"px";</script>
+    <script>
+        document.getElementById("textarea").style.height = document.getElementById("textarea").scrollHeight + "px";
+    </script>
 </body>
 
 </html>
-

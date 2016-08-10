@@ -83,9 +83,19 @@
         }
         
         .wui_cell_bd {
+            position: relative;
             width: 900px;
             margin: 0 10px;
-            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100.5' height='100%'><rect fill='#f1f1f1' x='100' y='0' width='0.5' height='100%'/></svg>");
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100%'><rect fill='#f1f1f1' x='99.5' y='0' width='0.5' height='100%'/></svg>");
+        }
+        .wui_cell_bd:before {
+            content: " ";
+            position: absolute;
+            right: 0;
+            top: 1px;
+            width: 0;
+            height: 100%;
+            border-right: 1px solid #fff;
         }
         
         .wui_cell_ft {
@@ -267,7 +277,7 @@
         
         .title {
             width: 1032px;
-            margin: 50px auto 5px;
+            margin: 0 auto 5px;
             display: -webkit-flex;
             display: -moz-flex;
             display: flex;
@@ -287,11 +297,16 @@
             padding-right: 32px;
             text-align: right;
         }
+        h1{
+            margin-top: 30px;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
     <div class="myDiv">
+        <h1>性能数据</h1>
         <div class="title">
             <div>序列</div>
             <div>总用时</div>
