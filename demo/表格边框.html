@@ -1,146 +1,151 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!DOCTYPE html>
 <html>
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1" name="viewport">
     <title>表格边框</title>
+
+<link rel="stylesheet" href="style.css" />
     <style type="text/css">
-    .table_1 {
-        border-top: 1px #D7D7D7 solid;
-        border-bottom: 1px #D7D7D7 solid;
-        color: #666;
-    }
-    
-    .table_1 th {
-        line-height: 16px;
-        padding: 5px;
-        background: #F7F7F7;
-        height: 18px;
-        text-align: right;
-        padding-right: 10px;
-        width: 18%;
-    }
-    
-    .table_1 td {
-        line-height: 16px;
-        padding: 5px;
-        background: white;
-        height: 18px;
-    }
-    
-    .table_2 {
-        background: #D7D7D7;
-        color: #666;
-        margin-top: 10px;
-    }
-    
-    .table_2 th {
-        line-height: 16px;
-        padding: 5px;
-        background: #F7F7F7;
-        height: 18px;
-        text-align: right;
-        padding-right: 10px;
-        width: 18%;
-        border: 1px white solid;
-    }
-    
-    .table_2 td {
-        line-height: 16px;
-        padding: 5px;
-        background: white;
-        height: 18px;
-    }
-    
-    .ta2 {
-        border-collapse: collapse;
-    }
-    
-    .ta2 tr td {
-        border: 1px solid black;
-    }
-    
-    .ta3 {
-        border-collapse: collapse;
-    }
-    
-    .ta3 tr td {
-        border: 1px solid black;
-    }
-    
-    .ta3 {
-        margin: -1px -1px -1px -1px;
-    }
-    
-    .ta4 {
-        border-width: 1px 0 0 1px;
-        border-style: solid;
-        border-color: black;
-    }
-    
-    .ta4 tr td {
-        border-width: 0px 1px 1px 0px;
-        border-style: solid;
-        border-color: black;
-    }
-    
-    .ta5 {
-        border-width: 1px 0 0 1px;
-        border-style: solid;
-        border-color: black;
-    }
-    
-    .ta5 tr td {
-        border-width: 0px 1px 1px 0px;
-        border-style: solid;
-        border-color: black;
-    }
-    
-    .ta5 {
-        margin: -1px -1px -1px -1px;
-    }
-    
-    .ta6 {
-        border: 0;
-    }
-    
-    .ta6 tr td {
-        border-width: 0px 1px 1px 0px;
-        border-style: solid;
-        border-color: black;
-    }
-    
-    .ta6 tr th.bb0 {
-        border-bottom: 0;
-    }
-    
-    .ta6 tr th.br0 {
-        border-right: 0;
-    }
-    
-    .ta6 tr td.bb0 {
-        border-bottom: 0;
-    }
-    
-    .ta6 tr td.br0 {
-        border-right: 0;
-    }
-    
-    .ta7 {
-        border-collapse: collapse;
-    }
-    
-    .ta7 {
-        border: 1px solid black;
-    }
-    
-    .ta7 tr td {
-        border: 0;
-    }
+        .table_1 {
+            border-top: 1px #D7D7D7 solid;
+            border-bottom: 1px #D7D7D7 solid;
+            color: #666;
+        }
+        
+        .table_1 th {
+            line-height: 16px;
+            padding: 5px;
+            background: #F7F7F7;
+            height: 18px;
+            text-align: right;
+            padding-right: 10px;
+            width: 18%;
+        }
+        
+        .table_1 td {
+            line-height: 16px;
+            padding: 5px;
+            background: white;
+            height: 18px;
+        }
+        
+        .table_2 {
+            background: #D7D7D7;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        .table_2 th {
+            line-height: 16px;
+            padding: 5px;
+            background: #F7F7F7;
+            height: 18px;
+            text-align: right;
+            padding-right: 10px;
+            width: 18%;
+            border: 1px white solid;
+        }
+        
+        .table_2 td {
+            line-height: 16px;
+            padding: 5px;
+            background: white;
+            height: 18px;
+        }
+        
+        .ta2 {
+            border-collapse: collapse;
+        }
+        
+        .ta2 tr td {
+            border: 1px solid black;
+        }
+        
+        .ta3 {
+            border-collapse: collapse;
+        }
+        
+        .ta3 tr td {
+            border: 1px solid black;
+        }
+        
+        .ta3 {
+            margin: -1px -1px -1px -1px;
+        }
+        
+        .ta4 {
+            border-width: 1px 0 0 1px;
+            border-style: solid;
+            border-color: black;
+        }
+        
+        .ta4 tr td {
+            border-width: 0px 1px 1px 0px;
+            border-style: solid;
+            border-color: black;
+        }
+        
+        .ta5 {
+            border-width: 1px 0 0 1px;
+            border-style: solid;
+            border-color: black;
+        }
+        
+        .ta5 tr td {
+            border-width: 0px 1px 1px 0px;
+            border-style: solid;
+            border-color: black;
+        }
+        
+        .ta5 {
+            margin: -1px -1px -1px -1px;
+        }
+        
+        .ta6 {
+            border: 0;
+        }
+        
+        .ta6 tr td {
+            border-width: 0px 1px 1px 0px;
+            border-style: solid;
+            border-color: black;
+        }
+        
+        .ta6 tr th.bb0 {
+            border-bottom: 0;
+        }
+        
+        .ta6 tr th.br0 {
+            border-right: 0;
+        }
+        
+        .ta6 tr td.bb0 {
+            border-bottom: 0;
+        }
+        
+        .ta6 tr td.br0 {
+            border-right: 0;
+        }
+        
+        .ta7 {
+            border-collapse: collapse;
+        }
+        
+        .ta7 {
+            border: 1px solid black;
+        }
+        
+        .ta7 tr td {
+            border: 0;
+        }
     </style>
 </head>
 
 <body>
+<div id="section">
+<h1 id="h1">表格边框</h1>
+<div id="view">
     <table width="100%" border="0" cellspacing="1" cellpadding="0" class="table_1">
         <tbody>
             <tr>
@@ -209,11 +214,12 @@
             </tr>
         </tbody>
     </table>
-    <table class="ta2" width="1004" border="0" cellpadding="0" cellspacing="0">
+    <br />
+    <table class="ta2" width="100%" border="0" cellpadding="0" cellspacing="0">
         <tr>
-            <td width="193">&nbsp;</td>
-            <td width="618">&nbsp;</td>
-            <td width="193">&nbsp;</td>
+            <td width="">&nbsp;</td>
+            <td width="">&nbsp;</td>
+            <td width="">&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -223,7 +229,7 @@
         <tr>
             <td>&nbsp;</td>
             <td>
-                <table class="ta3" width="620" border="0" cellspacing="0" cellpadding="0">
+                <table class="ta3" width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
@@ -265,11 +271,11 @@
         </tr>
     </table>
     <br />
-    <table class="ta4" width="1004" border="0" cellpadding="0" cellspacing="0">
+    <table class="ta4" width="100%" border="0" cellpadding="0" cellspacing="0">
         <tr>
-            <td width="193">&nbsp;</td>
-            <td width="618">&nbsp;</td>
-            <td width="193">&nbsp;</td>
+            <td width="">&nbsp;</td>
+            <td width="">&nbsp;</td>
+            <td width="">&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -279,7 +285,7 @@
         <tr>
             <td>&nbsp;</td>
             <td>
-                <table class="ta5" width="620" border="0" cellspacing="0" cellpadding="0">
+                <table class="ta5" width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
@@ -321,11 +327,11 @@
         </tr>
     </table>
     <br />
-    <table class="ta6" width="1004" border="0" cellpadding="0" cellspacing="0">
+    <table class="ta6" width="100%" border="0" cellpadding="0" cellspacing="0">
         <tr>
-            <td width="193">&nbsp;</td>
-            <td width="618">&nbsp;</td>
-            <td width="193" class="br0">&nbsp;</td>
+            <td width="">&nbsp;</td>
+            <td width="">&nbsp;</td>
+            <td width="" class="br0">&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -349,7 +355,7 @@
         </tr>
     </table>
     <br />
-    <table class="ta7" width="1004" border="0" cellspacing="0" cellpadding="0">
+    <table class="ta7" width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -376,19 +382,7 @@
             <td>&nbsp;</td>
         </tr>
     </table>
-<style>
-    textarea{
-        font: 12px/24px "";
-        color: #666;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 0 5px;
-        border:none;
-        white-space: pre-wrap;
-        background-color: #fff;
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='48'><rect fill='#fff' x='0' y='0' width='100%' height='24'/><rect fill='#f1f1f1' x='0' y='24' width='100%' height='24'/></svg>");
-    }
-</style>
+</div>
 <textarea id="textarea" disabled='disabled'>
 <table border="0" cellspacing="0" cellpadding="0">
 table{
@@ -398,7 +392,8 @@ table td {
 	border: 1px solid black;
 }
 </textarea>
-<script>document.getElementById("textarea").style.height=document.getElementById("textarea").scrollHeight+"px";</script>
+</div>
+<script src="randomBg.js"></script>
 </body>
 
 </html>

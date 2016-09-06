@@ -1,30 +1,102 @@
-
+<!DOCTYPE html>
 <html>
-
 <head>
-    <title>小于1px的线</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-touch-fullscreen" content="yes">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1" name="viewport">
+<title>小于1px的线</title>
+
+<link rel="stylesheet" href="style.css" />
     <style type="text/css">
-    .div1 {
+        .div1 {
         width: 100%;
-        height: 300px;
+        height: 100px;
         border-bottom: 1px solid #f60;
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100%'><rect fill='#f60' x='0' y='0' width='1' height='100%'/></svg>");
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100%'><rect fill='#f60' x='0' y='0' width='0.5' height='100%'/></svg>");
         /*background-repeat: no-repeat;*/
         /*background-position: 0px 22px;*/
     }
-    
-    
+.box {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+}
+
+.box:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    z-index: 1;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #f60;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+.box:after {
+    content: " ";
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    z-index: 1;
+    width: 1px;
+    height: 100%;
+    border-right: 1px solid #f60;
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+}
     </style>
 </head>
 
 <body>
+<div id="section">
+<h1 id="h1">小于1px的线</h1>
+
+<div id="view">
     <div class="div1"></div>
-    
+    <br>
+    <div class="box"></div>
+</div>
+<textarea id="textarea" disabled='disabled'>
+<div class="div1"></div>
+.div1 {
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #f60;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100%'><rect fill='#f60' x='0' y='0' width='0.5' height='100%'/></svg>");
+}
+
+
+<div class="box"></div>
+.box {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+}
+
+.box:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    z-index: 1;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #f60;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+</textarea>
+</div>
+<script src="randomBg.js"></script>
 </body>
 
 </html>

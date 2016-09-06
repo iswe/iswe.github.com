@@ -10,7 +10,7 @@
 <script>
   var setFontSize = function(){  
     var width = document.documentElement.clientWidth;  
-    width = width > 640 ? 640: width;  
+    width = width > 640 ? 640: width;  //640为设计稿宽度
     var fontSize = width/640 * 100;  
     document.getElementsByTagName("html")[0].style.fontSize = fontSize + "px";
   }  
