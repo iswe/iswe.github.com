@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1" name="viewport">
+    <title>hosts翻墙</title>
+
+<link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+<div id="section">
+<h1 id="h1">hosts翻墙</h1>
+<div id="view">
+参考:<br/> 
+https://laod.cn/hosts/windows7-8-10-mac-iphone-hosts.html<br/> <br/>
+Mac OS X终端输入:<br/>
+sudo killall -HUP mDNSResponder<br/> 
+</div>
+<textarea id="textarea" disabled='disabled'>
+
+Hosts是一个没有扩展名的系统文件，可以用记事本等工具打开，其作用就是将一些常用的网址域名与其对应的IP地址建立一个关联“数据库”，当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从Hosts文件中寻找对应的IP地址，一旦找到，系统会立即打开对应网页，如果没有找到，则系统会再将网址提交DNS域名解析服务器进行IP地址的解析
+
+这就是为什么通过修改hosts文件就可以浏览谷歌等被墙网站，原因是直接访问目标网站对应ip，不通过DNS，所以GFW的DNS污染就可以成功跳过。
+
+hosts文件在哪？什么修改？另附Windows7/8/10 Mac/iPhone原版hosts文件-老D
+
+Windows系统hosts位于 C:\Windows\System32\drivers\etc\hosts
+Android（安卓）系统hosts位于 /system/etc/hosts
+Mac（苹果电脑）系统hosts跟Linux一样位于 /etc/hosts
+iPhone（iOS）系统hosts跟Linux Mac一样位于 /etc/hosts
+Linux系统hosts位于 /etc/hosts
+
+你可以用记事本打开并修改
+
+PC建议用Notepad++进行编辑。
+
+注意：hosts文件属于系统核心文件之一，所以Windows用户必须用管理员身份打开才能修改保存，如果遇到无法保存，请右键文件hosts并找到“属性” -> “安全”，然后选择你登陆的用户名，最后点击编辑，勾选“写入”即可。
+
+Android（安卓）必须Root才能修改，Root Explorer管理器或ES文件浏览器装载/system可写状态，找到/system/etc/hosts的文件，使用文本编辑器打开编辑后保存。
+
+Linux系统使用Root权限vi编辑
+
+而iPhone、iPad也必须越狱才能修改！Windows系统跟苹果系统的hosts文件文本编码和换行符格式一样，而Android（安卓）则不一样，这点你需要注意。
+
+Linux系列我就不列出了，一般用这个系统的人都不会是小白。
+
+大家或许留意到，原版的hosts文件前面都带有井号“#”，以#开头的都是注释用的，所以并没什么卵用，如果你想快速恢复原版hosts文件，那么也可以直接清空里边的内容，一般情况没有什么影响。
+
+修改hosts后生效的方法：
+
+Windows
+开始 -> 运行 -> 输入cmd -> 在CMD窗口输入
+
+ipconfig /flushdns
+Linux
+终端输入
+
+sudo rcnscd restart
+对于systemd发行版，请使用命令
+
+sudo systemctl restart NetworkManager
+如果不懂请都尝试下
+
+Mac OS X终端输入
+
+sudo killall -HUP mDNSResponder
+Android
+开启飞行模式 -> 关闭飞行模式
+
+通用办法：
+
+拔网线(断网) -> 插网线(重新连接网络) 或者重启系统。
+
+</textarea>
+</div>
+<script src="randomBg.js"></script>
+</body>
+
+</html>
