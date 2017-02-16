@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <title>滑动</title>
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .address-item {
+        position: relative;
+        height: 84px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .address-item:last-child {
+        border-bottom: 0;
+    }
+    
+    .address-item-con {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 84px;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        background: #fff;
+    }
+    
+    .edit {
+        position: absolute;
+        top: 0;
+        right: 60px;
+        z-index: 0;
+        font-size: 14px;
+        color: #fff;
+        width: 60px;
+        height: 84px;
+        line-height: 84px;
+        text-align: center;
+        background: #ccc;
+    }
+    
+    .del {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+        font-size: 14px;
+        color: #fff;
+        width: 60px;
+        height: 84px;
+        line-height: 84px;
+        text-align: center;
+        background: #ff9a9a;
+    }
+    
+    .address-item .toleft {
+        transition: transform .3s;
+        transform: translateX(-60px);
+        -webkit-transform: translateX(-60px);
+    }
+    
+    .address-item .toright {
+        transition: transform .3s;
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="address-list">
+        <div class="address-item">
+            <div class="address-item-con">
+                <div class="address-item-hd">
+                    <p>左右滑动</p>
+                </div>
+            </div>
+            <div class="del">删除</div>
+        </div>
+        <div class="address-item">
+            <div class="address-item-con">
+                <div class="address-item-hd">
+                    <p>左右滑动</p>
+                </div>
+            </div>
+            <div class="del">删除</div>
+        </div>
+    </div>
+    <script src="jquery-1.12.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.address-item-con').bind('touchstart', function(e) {
+            startX = e.originalEvent.changedTouches[0].pageX,
+                startY = e.originalEvent.changedTouches[0].pageY;
+        });
+        $('.address-item-con').bind('touchmove', function(e) {
+            endX = e.originalEvent.changedTouches[0].pageX,
+                endY = e.originalEvent.changedTouches[0].pageY;
+            distanceX = endX - startX;
+            distanceY = endY - startY;
+            if (Math.abs(distanceX) > Math.abs(distanceY) && distanceX > 0) {
+                $(this).addClass("toright").removeClass("toleft");
+                $(this).parent(".address-item").siblings(".address-item").find(".address-item-con").addClass("toright").removeClass("toleft");
+            } else if (Math.abs(distanceX) > Math.abs(distanceY) && distanceX < 0) {
+                $(this).addClass("toleft").removeClass("toright");
+                $(this).parent(".address-item").siblings(".address-item").find(".address-item-con").addClass("toright").removeClass("toleft");
+            }
+
+        });
+    });
+    </script>
+</body>
+
+</html>

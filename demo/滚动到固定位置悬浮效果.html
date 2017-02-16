@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>滚动到固定位置悬浮效果</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" name="viewport">
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .box {
+        height: 50px;
+        background: #ccc;
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>div顶部吸附
+    <br/>
+    <br/>
+    <br/>
+    <div class="box">
+        <div class="info"></div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>div顶部吸附
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>div顶部吸附
+    <br/>div顶部吸附
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>div顶部吸附
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>div顶部吸附
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>div顶部吸附
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>div顶部吸附
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>div顶部吸附
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>div顶部吸附
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>div顶部吸附
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>div顶部吸附
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>div顶部吸附
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>div顶部吸附
+    <br/>
+    <br/>
+    <br/>
+</body>
+<script src="jquery-1.12.0.min.js"></script>
+<script type="text/javascript">
+var oInfo = $(".info");
+var oTop = $(".box").offset().top;
+var sTop = 0;
+$(window).scroll(function() {
+    sTop = $(this).scrollTop();
+    oInfo.text(sTop + '-' + oTop); //这一句 只是为了看看数据 没有多大的用处
+    if (sTop >= oTop) {
+        $(".box").css({
+            "position": "fixed",
+            "top": "0"
+        });
+    } else {
+        $(".box").css({
+            "position": "static"
+        });
+    }
+});
+</script>
+
+</html>
